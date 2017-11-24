@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+</head>
+<body>
+<!-- Menu -->
+  <div id="nav">
+    <button class="burger"></button>
+    <nav id="navigation1" class="navigation">
+      <ul>
+        <li>
+          <div class="nav-number">
+            <span class="line"></span>
+            <span class="number helv">01.</span>
+          </div>
+          <a href="#" class="roz nav-text">Status das<br />mulheres na mídia</a>
+        </li>
+        <li>
+          <div class="nav-number">
+            <span class="line"></span>
+            <span class="number helv">02.</span>
+          </div>
+          <a href="#" class="roz nav-text">Pesquisa</a>
+        </li>
+        <li>
+          <div class="nav-number">
+            <span class="line"></span>
+            <span class="number helv">03.</span>
+          </div>
+          <a href="#" class="roz nav-text">Participe</a>
+        </li>
+        <li>
+          <div class="nav-number">
+            <span class="line"></span>
+            <span class="number helv">04.</span>
+          </div>
+          <a href="#" class="roz nav-text">Ações</a>
+        </li>
+        <li>
+          <div class="nav-number">
+            <span class="line"></span>
+            <span class="number helv">05.</span>
+          </div>
+          <a href="#" class="roz nav-text">Contato</a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+
+
+<script>
+  $(document).ready(function() {
+    $('.burger').click(function () {
+        $(this).toggleClass('open');
+        $('#navigation1').toggleClass('open');
+        $('#nav').toggleClass('open');
+      })
+  })
+</script>
+
+</body>
+</html>

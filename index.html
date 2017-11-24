@@ -10,8 +10,52 @@
 
 </head>
 <body>
-  <div id="fullpage">
 
+  <!-- Menu -->
+  <div id="nav">
+    <button class="burger"></button>
+    <nav id="navigation1" class="navigation">
+      <ul>
+        <li>
+          <div class="nav-number">
+            <span class="line"></span>
+            <span class="number helv">01.</span>
+          </div>
+          <a href="#" class="roz nav-text">Status das<br />mulheres na mídia</a>
+        </li>
+        <li>
+          <div class="nav-number">
+            <span class="line"></span>
+            <span class="number helv">02.</span>
+          </div>
+          <a href="#" class="roz nav-text">Pesquisa</a>
+        </li>
+        <li>
+          <div class="nav-number">
+            <span class="line"></span>
+            <span class="number helv">03.</span>
+          </div>
+          <a href="#" class="roz nav-text">Participe</a>
+        </li>
+        <li>
+          <div class="nav-number">
+            <span class="line"></span>
+            <span class="number helv">04.</span>
+          </div>
+          <a href="#" class="roz nav-text">Ações</a>
+        </li>
+        <li>
+          <div class="nav-number">
+            <span class="line"></span>
+            <span class="number helv">05.</span>
+          </div>
+          <a href="#" class="roz nav-text">Contato</a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+
+  <div id="fullpage">
     <!-- Section 1 -->
     <div class="section">
       <div class="video-wrapper text-center">
@@ -37,6 +81,8 @@
       <div class="slide">
         <div class="container text-left">
           <h2>Participe</h2>
+          <p>Now that there is the Tec-9, a crappy spray gun from South Miami. This gun is advertised as the most popular gun in American crime. Do you believe that shit? It actually says that in the little book that comes with it: the most popular gun in American crime. Like they're actually proud of that shit.
+          </p>
         </div>
       </div>
       <div class="slide"></div>
@@ -44,19 +90,31 @@
     </div>
 
     <!-- Section 3 -->
-    <div class="section">Participe</div>
+    <div class="section">
+
+    </div>
     <div class="section">Referências</div>
   </div>
 
   <script>
     $(document).ready(function() {
       $('#fullpage').fullpage({
+        scrollBar: false,
+        loopHorizontal: false,
+        verticalCentered: true,
+        fixedElements: '#header, .footer',
         afterRender: function () {
 
             //playing the video
             $('video').get(0).play();
         }
       });
+
+      $('.burger').click(function () {
+        $(this).toggleClass('open');
+        $('#navigation1').toggleClass('open');
+        $('#nav').toggleClass('open');
+      })
     });
   </script>
 </body>
