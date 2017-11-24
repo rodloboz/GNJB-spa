@@ -1,0 +1,100 @@
+body {
+  background: #0D1933;
+  color: white;
+}
+
+h2 {
+  font-size: 100px;
+  line-height: 90px;
+}
+
+@font-face {
+  font-family: rozha;
+  src: url(../fonts/RozhaOne-Regular.ttf);
+}
+
+@font-face {
+  font-family: helv;
+  src: url(../fonts/HelveticaNeue.ttf);
+}
+
+.roz {
+  font-family: rozha;
+}
+
+.helv {
+  font-family: helv;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-left {
+  text-align: left;
+}
+
+.container {
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.social-icons {
+  list-style: none;
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.social-icons li {
+  display: inline-block;
+  margin: 0 10px;
+}
+
+.social-icons span {
+  background-size: 50px;
+  background-position: 0 0;
+  background-repeat: no-repeat;
+  width:50px;
+  height:50px;
+  display: block;
+}
+
+.twitter-icon {
+  background-image:url(../assets/icons/twitter_i.png);
+}
+
+.facebook-icon {
+  background-image:url(../assets/icons/face_i.png);
+}
+
+.whatsapp-icon {
+  background-image:url(../assets/icons/whatsapp_i.png);
+}
+
+/* SECTION 1 */
+
+.video-wrapper {
+  position: relative;
+}
+
+.skip-btn {
+  position: absolute;
+  bottom: 50px;
+}
+
+/* SECTION 2 */
+
+.social-icons-wrapper {
+  position: absolute;
+  top: 20px;
+  width: 100%;
+}
+
+
+
+
+
+
+

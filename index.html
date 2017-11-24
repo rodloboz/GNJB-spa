@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <title>Document</title>
+  <link rel="stylesheet" href="css/styles.css">
   <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.9.5/jquery.fullpage.min.css" />
   <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.9.5/jquery.fullpage.js"></script>
@@ -10,21 +11,52 @@
 </head>
 <body>
   <div id="fullpage">
-    <div class="section" style = "background: #F3ECC8">Género no Jornalismo Brasileiro</div>
-    <div class="section" style = "background: #78C2C3">
-      <div class="slide" style = "background: #EC9454"></div>
-      <div class="slide" style = "background: #F1F08A"></div>
-      <div class="slide" style = "background: #C6CD78"></div>
+
+    <!-- Section 1 -->
+    <div class="section">
+      <div class="video-wrapper text-center">
+        <video src="assets/video/RAFA_SP.mp4" autoplay></video>
+        <span class="skip-btn helv">SKIP VIDEO</span>
+      </div>
+    </div>
+    <div class="section">
+      <div class="social-icons-wrapper">
+        <ul class="social-icons">
+          <li><span class="twitter-icon"></span></li>
+          <li><span class="facebook-icon"></span></li>
+          <li><span class="whatsapp-icon"></span></li>
+        </ul>
+      </div>
+      <div class="container text-left">
+        <h2 class="roz">Status das mulheres<br />na mídia</h2>
+      </div>
     </div>
 
-    <div class="section" style = "background: #3F6699">Participe</div>
-    <div class="section" style = "background: #0D1B4C">Status das mulheres na mídia</div>
-    <div class="section" style = "background: #8E3343">Referências</div>
+    <!-- Section 2 -->
+    <div class="section">
+      <div class="slide">
+        <div class="container text-left">
+          <h2>Participe</h2>
+        </div>
+      </div>
+      <div class="slide"></div>
+      <div class="slide"></div>
+    </div>
+
+    <!-- Section 3 -->
+    <div class="section">Participe</div>
+    <div class="section">Referências</div>
   </div>
 
   <script>
     $(document).ready(function() {
-      $('#fullpage').fullpage();
+      $('#fullpage').fullpage({
+        afterRender: function () {
+
+            //playing the video
+            $('video').get(0).play();
+        }
+      });
     });
   </script>
 </body>
