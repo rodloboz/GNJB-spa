@@ -1,6 +1,7 @@
 body {
   background: #0D1933;
   color: white;
+  overflow: hidden;
 }
 
 h2 {
@@ -74,6 +75,10 @@ h2 {
   background-image:url(../assets/icons/whatsapp_i.png);
 }
 
+.noscroll {
+  overflow: hidden;
+}
+
 /* Burger Menu */
 .burger {
   margin: 30px 0 0 10px;
@@ -144,16 +149,16 @@ h2 {
   width: 0px;
   height: 100%;
   top: 0px;
-  left: 0px;
+  left: px;
   position: absolute;
   z-index: 999;
   background-color: #0D1933;
-  transition: width 0.5s ease-in-out;
+  transition: width 0.75s ease-in-out;
 }
 
 #nav.open {
   width: 100%;
-  transition: width 0.5s ease-in-out;
+  transition: width 0.75s ease-in-out;
 }
 
 .navigation {
@@ -161,18 +166,19 @@ h2 {
   display: flex;
   -webkit-flex-direction: column;
   flex-direction: column;
-
+  position: absolute;
   margin-left: 30px;
   margin-right: 30px;
   overflow: hidden;
   height: 85%;
-  max-width: 0;
-  transition: max-width 0.5s ease-in-out;
+  max-width: 100%;
+  left: -1000px;
+  transition: left 0.75s ease-in;
 }
 
 .navigation.open {
-  max-width: 100%;
-  transition: max-width 0.5s ease-in-out;
+  left: 0px;
+  transition: left 0.75s ease-in-out;
 }
 
 .navigation ul {
@@ -229,6 +235,7 @@ h2 {
   position: absolute;
   bottom: 20px;
   margin: 0 auto;
+  cursor: pointer;
 }
 
 video {
@@ -241,7 +248,7 @@ video {
   height: auto;
   z-index: -100;
   transform: translateX(-50%) translateY(-50%);
-  background: url('//demosthenes.info/assets/images/polina.jpg') no-repeat;
+  background: url('') no-repeat;
   background-size: cover;
   transition: 1s opacity;
 }

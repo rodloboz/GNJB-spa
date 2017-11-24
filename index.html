@@ -50,15 +50,15 @@
             <span class="line"></span>
             <span class="number helv">05.</span>
           </div>
-          <a href="#section5" class="roz nav-text">Contato</a>
+          <a href="#section6" class="roz nav-text">Contato</a>
         </li>
       </ul>
-      <ul class="social-icons" style="margin-top: 10px; flex-grow: 1;">
+      <ul class="social-icons nav-slider" style="margin-top: 10px; flex-grow: 1;">
         <li><span class="twitter-icon"></span></li>
         <li><span class="facebook-icon"></span></li>
         <li><span class="whatsapp-icon"></span></li>
       </ul>
-      <div class="nav-footer">
+      <div class="nav-footer nav-slider">
         <span class="line"></span>
         <span class="number helv">INFORMAÇÃO SOBRE O Rodape, Realização e apoio ipsum dolor amet artisan adaptogen fashion axe keffiyeh mustache kogi freegan la croix retro</span>
       </div>
@@ -66,6 +66,7 @@
   </div>
 
   <div id="fullpage">
+
     <!-- Section 1 -->
     <div class="section">
       <div class="video-wrapper text-center">
@@ -73,6 +74,8 @@
       </div>
         <span class="skip-btn helv">SKIP VIDEO</span>
     </div>
+
+    <!-- Section 2 -->
     <div class="section">
       <div class="social-icons-wrapper">
         <ul class="social-icons">
@@ -86,9 +89,9 @@
       </div>
     </div>
 
-    <!-- Section 2 -->
+    <!-- Section 3 -->
     <div class="section">
-      <div class="slide">
+      <!-- <div class="slide">
         <div class="container text-left">
           <h2>Participe</h2>
           <p>Now that there is the Tec-9, a crappy spray gun from South Miami. This gun is advertised as the most popular gun in American crime. Do you believe that shit? It actually says that in the little book that comes with it: the most popular gun in American crime. Like they're actually proud of that shit.
@@ -97,45 +100,34 @@
       </div>
       <div class="slide"></div>
       <div class="slide"></div>
+ -->
+      <div class="container text-left">
+        <h2 class="roz">Pesquisa</h2>
+      </div>
     </div>
 
-    <!-- Section 3 -->
+    <!-- Section 4 -->
     <div class="section">
-
+      <div class="container text-left">
+        <h2 class="roz">Participe</h2>
+      </div>
     </div>
-    <div class="section">Referências</div>
+
+    <!-- Section 5 -->
+    <div class="section">
+      <div class="container text-left">
+        <h2 class="roz">Ações</h2>
+      </div>
+    </div>
+
+    <!-- Section 6 -->
+    <div class="section">
+      <div class="container text-left">
+        <h2 class="roz">Contato</h2>
+      </div>
+    </div>
   </div>
 
-  <script>
-
-    $(document).ready(function() {
-      $('#fullpage').fullpage({
-        scrollBar: false,
-        loopHorizontal: false,
-        verticalCentered: true,
-        anchors: ['section1', 'section2', 'section3', 'section4', 'section5'],
-        fixedElements: '#header, .footer',
-        afterRender: function () {
-
-            //playing the video
-            $('video').get(0).play();
-        }
-      });
-
-      var toggleBurger = function() {
-        $('.burger').toggleClass('open');
-        $('#navigation1').toggleClass('open');
-        $('#nav').toggleClass('open');
-      }
-
-      $('.burger').click(function() {
-        toggleBurger();
-      })
-
-      $('.navigation a').click(function() {
-        toggleBurger();
-      })
-    });
-  </script>
+  <script src="js/application.js"></script>
 </body>
 </html>
