@@ -75,6 +75,11 @@ section {
   width:20px;
   height:20px;
   display: block;
+  opacity: 0.3;
+}
+
+.social-icons span:hover {
+  opacity: 1;
 }
 
 .twitter-icon {
