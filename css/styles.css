@@ -9,12 +9,18 @@ body {
 }
 
 h2 {
-  font-size: 50px;
-  line-height: 50px;
+  font-size: 40px;
+  line-height: 40px;
+}
+
+p {
+  font-family: helv;
+  font-size: 12px;
+  line-height: 14px;
 }
 
 section {
-  height: 100vh;
+  margin-top: 50px;
 }
 
 @font-face {
@@ -45,8 +51,8 @@ section {
 
 .container {
   max-width: 700px;
-  margin: 20px auto;
-  padding: 0px 4em;
+  margin: auto;
+  padding: 0px 50px;
 }
 
 .social-icons {
@@ -83,10 +89,40 @@ section {
   background-image:url(../assets/icons/whatsapp_i.png);
 }
 
+#pagination {
+    clear:both;
+    width:75px;
+    margin:5px auto 0;
+    padding:0;
+}
+
+#pagination li {
+    list-style:none;
+    float:left;
+    margin:0 2px;
+}
+
+#pagination li a {
+    display:block;
+    width:10px;
+    height:10px;
+    text-indent:-10000px;
+    background: #838992;
+    opacity: 0.4;
+    border-radius: 10px;
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+}
+
+#pagination li a.active {
+    background: #838992;
+    opacity: 1;
+}
+
 /* Burger Menu */
 .burger {
-  top: 2.5em;
-  left: 2em;
+  top: 30px;
+  left: 20px;
   z-index: 9999;
   position: fixed;
   color: white;
@@ -96,8 +132,8 @@ section {
   outline: 0;
   padding: 0;
   cursor: pointer;
-  border-bottom: : 4px solid white;
-  width: 40px;
+  border-bottom: : 2px solid white;
+  width: 20px;
 
   transition: border-bottom 1s ease-in-out;
   -webkit-transition: border-bottom 1s ease-in-out;
@@ -111,10 +147,10 @@ section {
 .burger:before {
   content: "";
   display: block;
-  border-bottom: 4px solid white;
+  border-bottom: 2px solid white;
   box-shadow: 0px 3px 15px rgba(0,0,0,0.2);
   width:100%;
-  margin-bottom: 10px;
+  margin-bottom: 5px;
   transition: transform 0.5s ease-in-out;
   -webkit-transition: -webkit-transform 0.5s ease-in-out;
 }
@@ -122,30 +158,30 @@ section {
 .burger:after {
   content: "";
   display: block;
-  border-bottom: 4px solid white;
+  border-bottom: 2px solid white;
   box-shadow: 0px 3px 15px rgba(0,0,0,0.2);
   width:100%;
-  margin-bottom: 10px;
+  margin-bottom: 5px;
   transition: transform 0.5s ease-in-out;
   -webkit-transition: -webkit-transform 0.5s ease-in-out;
 }
 
 .burger.open {
-  border-bottom: 4px solid transparent;
+  border-bottom: 2px solid transparent;
   transition: : border-bottom 0.8s ease-in-out;
   -webkit-transition: border-bottom 0.8s ease-in-out;
 }
 
 .burger.open:before {
-  transform: rotate(-405deg) translateY(1px) translateX(-3px);
-  -webkit-transform: rotate(-405deg) translateY(1px) translateX(-3px);
+  transform: rotate(-405deg) translateY(3px) translateX(-4px);
+  -webkit-transform: rotate(-405deg) translateY(3px) translateX(-4px);
   transition: transform 0.5s ease-in-out;
   -webkit-transition: -webkit-transform 0.5s ease-in-out;
 }
 
 .burger.open:after {
-  transform: rotate(405deg) translateY(-8px) translateX(-7px);
-  -webkit-transform: rotate(405deg) translateY(-8px) translateX(-7px);
+  transform: rotate(405deg) translateY(-1px) translateX(-2px);
+  -webkit-transform: rotate(405deg) translateY(-1px) translateX(-2px);
   transition: transform 0.5s ease-in-out;
   -webkit-transition: -webkit-transform 0.5s ease-in-out;
 }
@@ -263,7 +299,9 @@ width: 100%;
 }
 
 .card {
-  width: 300px;
+  width: 200px;
+  display: block;
+  margin: auto;
 }
 
 /* SECTION 2 */
