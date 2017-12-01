@@ -213,19 +213,15 @@ section {
 }
 
 .navigation {
-  /*display: -webkit-flex;
+  display: -webkit-flex;
   display: flex;
   -webkit-flex-direction: column;
   flex-direction: column;
-*/
-  margin-top: 80px;
+
+  margin-top: 60px;
   padding-left: 3em;
   padding-right: 3em;
   position: relative;
- /* margin: 0 auto;
-  overflow: hidden;
-  height: 100%;
-  width: 100%;*/
   left: -1000px;
   transition: left 0.75s ease-in;
 }
@@ -287,15 +283,6 @@ section {
   font-size: 25px;
 }
 
-/* SECTION 1 */
-
-.skip-btn {
-  position: absolute;
-  bottom: 20px;
-  margin: 0 auto;
-  cursor: pointer;
-}
-
 video {
 width: 100%;
 }
@@ -306,15 +293,14 @@ width: 100%;
   margin: auto;
 }
 
-/* SECTION 2 */
 
-.social-icons-wrapper {
-  position: absolute;
-  top: 20px;
-  width: 100%;
+
+@media screen and (min-height: 600px){
+  .navigation {
+    height: 80%;
+    margin-top: 80px;
+  }
 }
-
-
 
 
 
