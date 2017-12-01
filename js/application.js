@@ -19,4 +19,11 @@ $(document).ready(function() {
         scrollTop: $("#section2").offset().top
     }, 2000);
   })
+
+  var screenWidth = $(window).width();
+  if (screenWidth < 800){
+        $('video').removeAttr('autoplay');
+  } else {
+    $('video').attr('autoplay');
+  }
 });
