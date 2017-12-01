@@ -186,10 +186,6 @@ section {
   -webkit-transition: -webkit-transform 0.5s ease-in-out;
 }
 
-body.open {
-  width:100%; height:100%; position:fixed; overflow:auto;
-}
-
 /* Navigation */
 
 #nav {
