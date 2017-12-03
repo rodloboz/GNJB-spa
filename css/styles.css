@@ -373,8 +373,24 @@ section {
   text-shadow: 1px 1px 2px grey;
 }
 
+.footer-row {
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-direction: row /* works with row or column */
+  flex-direction: row;
+  -webkit-align-items: center;
+  align-items: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+}
+
+.logos {
+  height: 50px;
+}
+
+
 video {
-width: 100%;
+  width: 100%;
 }
 
 #cards {
