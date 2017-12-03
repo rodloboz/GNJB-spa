@@ -6,6 +6,7 @@
   <title>Mulheres No Jornalismo Brasileiro </title>
   <link rel="stylesheet" href="css/styles.css">
   <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+  <script src="js/interact.min.js"></script>
 </head>
 <body>
 
@@ -13,50 +14,52 @@
   <button class="burger"></button>
   <div id="nav">
     <div class="navigation">
-      <ul class="nav-menu">
-        <li>
-          <div class="nav-number">
-            <span class="line thin"></span>
-            <span class="number helv">01.</span>
-          </div>
-          <a href="#section1" class="roz nav-text">STATUS DAS MULHERES NOS MÍDIA</a>
-        </li>
-        <li>
-          <div class="nav-number">
-            <span class="line thin"></span>
-            <span class="number helv">02.</span>
-          </div>
-          <a href="#section2" class="roz nav-text">EQUIPE</a>
-        </li>
-        <li>
-          <div class="nav-number">
-            <span class="line thin"></span>
-            <span class="number helv">03.</span>
-          </div>
-          <a href="#section3" class="roz nav-text">METODOLOGIA</a>
-        </li>
-        <li>
-          <div class="nav-number">
-            <span class="line thin"></span>
-            <span class="number helv">04.</span>
-          </div>
-          <a href="#section4" class="roz nav-text">RECOMENDAÇÕES</a>
-        </li>
-        <li>
-          <div class="nav-number">
-            <span class="line thin"></span>
-            <span class="number helv">05.</span>
-          </div>
-          <a href="#section5" class="roz nav-text">CONTATO</a>
-        </li>
-      </ul>
-      <ul id="nav-social-icons"class="social-icons" style="margin-top: 10px; flex-grow: 1;">
+      <ul id="nav-social-icons"class="social-icons">
         <li><span class="twitter-icon"></span></li>
         <li><span class="facebook-icon"></span></li>
         <li><span class="whatsapp-icon"></span></li>
       </ul>
-      <div class="nav-footer">
-        <p>Realização: logo GN, logo Abraji // <br> Apoio: Google News Lab</p>
+      <div class="nav-content">
+        <ul class="nav-menu">
+          <li>
+            <div class="nav-number">
+              <span class="line thin"></span>
+              <span class="number helv">01.</span>
+            </div>
+            <a href="#section1" class="roz nav-text">STATUS DAS MULHERES NOS MÍDIA</a>
+          </li>
+          <li>
+            <div class="nav-number">
+              <span class="line thin"></span>
+              <span class="number helv">02.</span>
+            </div>
+            <a href="#section2" class="roz nav-text">EQUIPE</a>
+          </li>
+          <li>
+            <div class="nav-number">
+              <span class="line thin"></span>
+              <span class="number helv">03.</span>
+            </div>
+            <a href="#section3" class="roz nav-text">METODOLOGIA</a>
+          </li>
+          <li>
+            <div class="nav-number">
+              <span class="line thin"></span>
+              <span class="number helv">04.</span>
+            </div>
+            <a href="#section4" class="roz nav-text">RECOMENDAÇÕES</a>
+          </li>
+          <li>
+            <div class="nav-number">
+              <span class="line thin"></span>
+              <span class="number helv">05.</span>
+            </div>
+            <a href="#section5" class="roz nav-text">CONTATO</a>
+          </li>
+        </ul>
+        <div class="nav-footer">
+          <p>Realização: logo GN, logo Abraji // <br> Apoio: Google News Lab</p>
+        </div>
       </div>
     </div>
   </div>
@@ -71,28 +74,30 @@
 
   <!-- Section 1 -->
   <section id="section1" style="margin-top: 0px;">
-    <div>
-      <ul class="social-icons" style="padding: 0;">
-        <li><span class="twitter-icon"></span></li>
-        <li><span class="facebook-icon"></span></li>
-        <li><span class="whatsapp-icon"></span></li>
-      </ul>
-    </div>
     <div class="container text-left">
-      <h2 class="roz">STATUS DAS MULHERES NOS MIDIA</h2>
+      <h2 class="roz">STATUS DAS MULHERES NOS MÍDIA</h2>
       <div>
         <span class="line thick"></span>
           <span class="number helv-med text-dark">A Associação Brasileira de Jornalismo Investigativo (Abraji) e a Gênero e Número realizaram uma pesquisa inédita no Brasil, com o apoio do Google News Lab, para investigar os desafios enfrentados pelas mulheres no exercício da profissão jornalística.</span>
       </div>
       <div id="cards">
-        <img src="assets/images/card1.png" alt="" class="card">
+        <div>
+          <img src="assets/images/card1.png" alt="" id="card-1"class="card draggable front">
+        </div>
+        <img src="assets/images/card2.png" alt="" id="card-2"class="card draggable back">
+        <!-- <div id="drag-left" class="drag-info">
+          <span style=" display: inline-block; vertical-align: middle;">Pega</span>
+        </div>
+        <div id="drag-right" class="drag-info">
+          <span style=" display: inline-block; vertical-align: middle;">Pega</span>
+        </div> -->
       </div>
       <ol id="pagination">
           <li><a href="#slide1" class="active">1</a></li>
           <li><a href="#slide2">2</a></li>
-          <li><a href="#slide3">3</a></li>
+          <!-- <li><a href="#slide3">3</a></li>
           <li><a href="#slide4">4</a></li>
-          <li><a href="#slide5">5</a></li>
+          <li><a href="#slide5">5</a></li> -->
       </ol>
     </div>
     <div class="container" style="margin-top: 30px;">
@@ -106,7 +111,7 @@
       <h2 class="roz">EQUIPE</h2>
       <div>
         <span class="line thick"></span>
-        <span class="number helv-med text-dark"><strong>Coordenação de pesquisa:</strong></span>
+        <span class="number helv-med text-dark">Coordenação de pesquisa:</span>
         <p class="helv text-light">Natália e Verônica Toste</p>
         <p class="helv-med text-dark">Consultoria executiva:</p>
         <p class="helv text-light">Maiá Menezes, Alana Lobo e Thiago Herdy</p>
@@ -116,7 +121,7 @@
         <p class="helv text-light">Andressa Cabral e Fernanda Távora</p>
         <p class="helv-med text-dark">Gerência do projeto:</p>
         <p class="helv text-light">Guilherme Alpendre</p>
-        <p class="helv-med text-dark">Wedseign e animações</p>
+        <p class="helv-med text-dark">Webdesign e animações</p>
         <p class="helv text-light">Mariana Santos, Inês Barracha, Rui Freitas, João Erbetta</p>
       </div>
     </div>
