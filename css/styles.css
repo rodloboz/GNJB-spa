@@ -161,17 +161,17 @@ section {
 }
 
 .video-icons {
-  background-size: 60px;
+  background-size: 80px;
   background-position: 0 0;
   background-repeat: no-repeat;
-  width:60px;
-  height:60px;
+  width:80px;
+  height:80px;
   opacity: 0.5;
   display: none;
 
   position: absolute;
-  bottom: 20px;
-  right: 40px;
+  bottom: 40px;
+  right: 80px;
 }
 
 .video-icons.show {
@@ -414,6 +414,7 @@ section {
 }
 
 .footer-row {
+  margin-top: 80px;
   display: -webkit-flex;
   display: flex;
   -webkit-flex-direction: row /* works with row or column */
