@@ -1,13 +1,3 @@
-.bg-img {
- /* background: -moz-linear-gradient(top,  0%, rgba(0, 0, 0, 0) 59%, rgba(0, 0, 0, 0.65) 100%), url(../assets/textures/BEE.png) center center no-repeat;
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(0, 0, 0, 0)), color-stop(59%, rgba(0, 0, 0, 0)), color-stop(100%, rgba(0, 0, 0, 0.65))), url(../assets/textures/BEE.png) center center no-repeat;
-  background: -webkit-linear-gradient(top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 59%, rgba(0, 0, 0, 0.65) 100%), url(../assets/textures/BEE.png) center center no-repeat;
-  background: -o-linear-gradient(top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 59%, rgba(0, 0, 0, 0.65) 100%), url(../assets/textures/BEE.png) center center no-repeat;
-  background: -ms-linear-gradient(top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 59%, rgba(0, 0, 0, 0.65) 100%), url(../assets/textures/BEE.png) center center no-repeat;
-  background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 59%, rgba(0, 0, 0, 0.65) 100%), url(../assets/textures/BEE.png) center center no-repeat;*/
-}
-
-
 body {
   color: white;
   margin: 0;
@@ -50,23 +40,23 @@ section {
 }
 
 #section1 {
-  background: linear-gradient(0deg, rgba(21, 26, 26, 0.8), rgba(159, 181, 182, 0.8) ), url(../assets/textures/Status_MADEIRA.png) center center no-repeat;
+  background: linear-gradient(0deg, rgba(21, 26, 26, 0.8), rgba(159, 181, 182, 0.8) ), url(../assets/textures/MADEIRA-low.jpg) center center no-repeat;
 }
 
 #section2 {
-  background: linear-gradient(0deg, rgba(21, 26, 26, 0.8), rgba(159, 181, 182, 0.8) ), url(../assets/textures/Equipe_DECO.png) center center no-repeat;
+  background: linear-gradient(0deg, rgba(21, 26, 26, 0.8), rgba(159, 181, 182, 0.8) ), url(../assets/textures/DECO-low.jpg) center center no-repeat;
 }
 
 #section3 {
-  background: linear-gradient(0deg, rgba(21, 26, 26, 0.8), rgba(159, 181, 182, 0.8) ), url(../assets/textures/Metodologia_BEE.png) center center no-repeat;
+  background: linear-gradient(0deg, rgba(21, 26, 26, 0.8), rgba(159, 181, 182, 0.8) ), url(../assets/textures/BEE-low.jpg) center center no-repeat;
 }
 
 #section4 {
-  background: linear-gradient(0deg, rgba(21, 26, 26, 0.8), rgba(159, 181, 182, 0.8) ), url(../assets/textures/Recomendacoes_WWW.png) center center no-repeat;
+  background: linear-gradient(0deg, rgba(21, 26, 26, 0.8), rgba(159, 181, 182, 0.8) ), url(../assets/textures/WWW-low.jpg) center center no-repeat;
 }
 
 #section5 {
-  background: linear-gradient(0deg, rgba(21, 26, 26, 0.8), rgba(159, 181, 182, 0.8) ), url(../assets/textures/Contacto_VVV.png) center center no-repeat;
+  background: linear-gradient(0deg, rgba(21, 26, 26, 0.8), rgba(159, 181, 182, 0.8) ), url(../assets/textures/VVV-low.jpg) center center no-repeat;
 }
 
 @font-face {
@@ -103,11 +93,6 @@ section {
 
 .text-left {
   text-align: left;
-}
-
-.text-dark {
-  color: #181818;
-  font-weight: bold;
 }
 
 .text-light {
@@ -232,9 +217,7 @@ section {
   -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=80)";
 }
 
-
-
-#pagination {
+.pagination {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -251,25 +234,25 @@ section {
   padding:0;
 }
 
-#pagination li {
+.pagination li {
   list-style:none;
   float:left;
   margin:0 2px;
 }
 
-#pagination li a {
+.pagination li a {
   display:block;
   width:10px;
   height:10px;
   text-indent:-10000px;
-  background: #D26D59;
+  background: #9FB5B6;
   opacity: 0.4;
   -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=40)";
   border-radius: 10px;
 }
 
-#pagination li a.active {
-    background: #D26D59;
+.pagination li a.active {
+    background: #9FB5B6;
     opacity: 1;
     -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
 }
@@ -584,6 +567,33 @@ video {
   width: 40px;
 }
 
+#quotes {
+  margin: 30px 0 20px 0;
+  position: relative;
+  padding: 0 20px;
+}
+
+.quote {
+  width: 260px;
+  display: block;
+  margin: auto;
+  cursor: pointer;
+}
+
+#stats {
+  margin: 30px 0 20px 0;
+  position: relative;
+  padding: 0 20px;
+}
+
+.stat {
+  width: 260px;
+  display: block;
+  margin: auto;
+  cursor: pointer;
+}
+
+
 /* Media */
 
 /*@media screen and (max-height: 480px) {
@@ -715,6 +725,22 @@ video {
     width: 480px;
   }
 
+  #quotes {
+    margin-top: 50px;
+  }
+
+  .quote {
+    width: 480px;
+  }
+
+  #stats {
+    margin-top: 50px;
+  }
+
+  .stat {
+    width: 480px;
+  }
+
   .front {
     z-index: 2;
   }
@@ -765,7 +791,7 @@ video {
     right: 120px;
   }
 
-  #pagination li a {
+  .pagination li a {
     width:15px;
     height:15px;
     border-radius: 10px;

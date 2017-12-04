@@ -14,6 +14,44 @@ var cards = [
   new Card(3, "assets/images/card4.png")
 ]
 
+var Quote = function(id, url) {
+  this.id = id
+  this.url = url;
+};
+
+var quotes = [
+  new Quote(0, "assets/quotes/QUOTE01.png"),
+  new Quote(1, "assets/quotes/QUOTE02.png"),
+  new Quote(2, "assets/quotes/QUOTE03.png"),
+  new Quote(3, "assets/quotes/QUOTE04.png"),
+  new Quote(4, "assets/quotes/QUOTE05.png"),
+  new Quote(5, "assets/quotes/QUOTE06.png"),
+  new Quote(6, "assets/quotes/QUOTE07.png"),
+  new Quote(7, "assets/quotes/QUOTE08.png"),
+  new Quote(8, "assets/quotes/QUOTE09.png"),
+  new Quote(9, "assets/quotes/QUOTE10.png")
+]
+
+var Stat = function(id, url) {
+  this.id = id
+  this.url = url;
+};
+
+var stats = [
+  new Stat(0, "assets/stats/DADOS01.png"),
+  new Stat(1, "assets/stats/DADOS02.png"),
+  new Stat(2, "assets/stats/DADOS03.png"),
+  new Stat(3, "assets/stats/DADOS04.png"),
+  new Stat(4, "assets/stats/DADOS05.png"),
+  new Stat(5, "assets/stats/DADOS06.png"),
+  new Stat(6, "assets/stats/DADOS07.png"),
+  new Stat(7, "assets/stats/DADOS08.png"),
+  new Stat(8, "assets/stats/DADOS09.png"),
+  new Stat(9, "assets/stats/DADOS10.png"),
+  new Stat(10, "assets/stats/DADOS11.png"),
+  new Stat(11, "assets/stats/DADOS12.png")
+]
+
 $(document).ready(function() {
   var isMobile = false; //initiate as false
   // device detection
@@ -108,7 +146,7 @@ $(document).ready(function() {
       $('.card').removeClass('front');
       $('.card').removeClass('second');
       $('.card').removeClass('third');
-      $('#pagination li a').removeClass('active');
+      $('#card-circles li a').removeClass('active');
       for (i in cards) {
         var cardID = `#card-${cards[i].id}`;
         if (i == 0) {
@@ -126,4 +164,48 @@ $(document).ready(function() {
         }
       }
     };
+
+    // Quotes
+
+    var nextQuote = quotes[0];
+
+    $('.quote').click(function() {
+      var prevID, nextID;
+      prevID = `#q-${nextQuote.id}`;
+      if (nextQuote !== quotes[quotes.length - 1]) {
+        nextQuote = quotes[nextQuote.id + 1];
+      } else {
+        nextQuote = quotes[0];
+      }
+      nextID = `#q-${nextQuote.id}`;
+      $(prevID).toggleClass('active');
+      $(nextID).toggleClass('active');
+      $('img.quote').fadeOut(700, function(){
+          $(this).attr('src', nextQuote.url).bind('onreadystatechange load', function(){
+             if (this.complete) $(this).fadeIn(700);
+          });
+       });
+    });
+
+    // Stats
+
+    var nextStat = stats[0];
+
+    $('.stat').click(function() {
+      var prevID, nextID;
+      prevID = `#s-${nextStat.id}`;
+      if (nextStat !== stats[stats.length - 1]) {
+        nextStat = stats[nextStat.id + 1];
+      } else {
+        nextStat = stats[0];
+      }
+      nextID = `#s-${nextStat.id}`;
+      $(prevID).toggleClass('active');
+      $(nextID).toggleClass('active');
+      $('img.stat').fadeOut(700, function(){
+          $(this).attr('src', nextStat.url).bind('onreadystatechange load', function(){
+             if (this.complete) $(this).fadeIn(700);
+          });
+       });
+    });
 });
