@@ -168,7 +168,7 @@ section {
 .whatsapp-icon {
   background-image: url(../assets/icons/whatsapp_i.png);
 }
-
+/*
 .skip-icon {
   background-image: url(../assets/icons/skip_icon.svg);
   background-size: 60px;
@@ -183,7 +183,7 @@ section {
   bottom: 100px;
   right: calc( 100vw / 2);
   z-index: 9999;
-}
+}*/
 
 .video-icons {
   background-size: 30px;
@@ -347,6 +347,8 @@ section {
   -webkit-transition: width 0.75s ease-in-out;
   transition: width 0.75s ease-in-out;
 
+
+
   /* Fallback */
   background-color: #1F2525;
   /*background: url(../assets/images/linear_bg.png);
@@ -500,14 +502,14 @@ video {
 }
 
 .front {
-  z-index: 2;
+  z-index: 4;
 }
 
 .second {
   position: absolute;
   top: 0;
   left: calc(50% - 130px);
-  z-index: -1;
+  z-index: 3;
   transform: rotate(-4deg);
   -webkit-transform: rotate(-4deg);
 }
@@ -516,7 +518,7 @@ video {
   position: absolute;
   top: 0;
   left: calc(50% - 130px);
-  z-index: -2;
+  z-index: 2;
   transform: rotate(4deg);
   -webkit-transform: rotate(4deg);
 }
@@ -525,7 +527,7 @@ video {
   position: absolute;
   top: 0;
   left: calc(50% - 130px);
-  z-index: -3;
+  z-index: 1;
 }
 
 #drag-left {
@@ -571,6 +573,7 @@ video {
   margin: 30px 0 20px 0;
   position: relative;
   padding: 0 20px;
+  height: 350px;
 }
 
 .quote {
@@ -584,6 +587,7 @@ video {
   margin: 30px 0 20px 0;
   position: relative;
   padding: 0 20px;
+  height: 350px;
 }
 
 .stat {
@@ -739,10 +743,6 @@ video {
 
   .stat {
     width: 480px;
-  }
-
-  .front {
-    z-index: 2;
   }
 
   .second {
