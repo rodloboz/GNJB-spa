@@ -1,3 +1,19 @@
+var Card = function(id, url) {
+  this.id = id
+  this.url = url;
+};
+
+Card.prototype.buildHTML = function(position) {
+  return  `<img src="${this.url}" alt="" id="card-${this.id}" class="card">`
+};
+
+var cards = [
+  new Card(0, "assets/images/card1.png"),
+  new Card(1, "assets/images/card2.png"),
+  new Card(2, "assets/images/card3.png"),
+  new Card(3, "assets/images/card4.png")
+]
+
 $(document).ready(function() {
   var isMobile = false; //initiate as false
   // device detection
@@ -74,15 +90,42 @@ $(document).ready(function() {
 
 
   // Cards
+    $('#drag-left svg').on('click', function() {
+      // Move Last Card to Beginning of Array
+      cards.unshift(cards.pop());
+      switchCards()
+    });
 
-    $('#drag-left svg').on('click', switchCard);
+    $('#drag-right svg').on('click', function() {
+      // Move First Card to End of Array
+      cards.push(cards.shift());
+      switchCards();
+    });
 
-    $('#drag-right svg').on('click', switchCard);
+    function switchCards() {
+      // Update Card Classes
+      $('.card').removeClass('back');
+      $('.card').removeClass('front');
+      $('.card').removeClass('second');
+      $('.card').removeClass('third');
+      for (i in cards) {
+        id = `#card-${cards[i].id}`;
+        if (i == 0) {
+          $(id).addClass('front');
+        } else if (i == 1) {
+          $(id).addClass('second');
+        } else if (i == 2) {
+          $(id).addClass('third');
+        } else if (i == cards.length - 1) {
+          $(id).addClass('back');
+        } else {
+          $(id).addClass('back');
+        }
+      }
 
-    function switchCard() {
-      $('#card-1').toggleClass('front').toggleClass('back');
-      $('#card-2').toggleClass('back').toggleClass('front');
-      $('#pagination li a:contains("1")').toggleClass('active');
-      $('#pagination li a:contains("2")').toggleClass('active');
+      // $('#card-1').toggleClass('front').toggleClass('back');
+      // $('#card-2').toggleClass('back').toggleClass('front');
+      // $('#pagination li a:contains("1")').toggleClass('active');
+      // $('#pagination li a:contains("2")').toggleClass('active');
     };
 });
