@@ -108,24 +108,22 @@ $(document).ready(function() {
       $('.card').removeClass('front');
       $('.card').removeClass('second');
       $('.card').removeClass('third');
+      $('#pagination li a').removeClass('active');
       for (i in cards) {
-        id = `#card-${cards[i].id}`;
+        var cardID = `#card-${cards[i].id}`;
         if (i == 0) {
-          $(id).addClass('front');
+          var markerID = `#circle-${cards[i].id}`
+          $(cardID).addClass('front');
+          $(markerID).addClass('active');
         } else if (i == 1) {
-          $(id).addClass('second');
+          $(cardID).addClass('second');
         } else if (i == 2) {
-          $(id).addClass('third');
+          $(cardID).addClass('third');
         } else if (i == cards.length - 1) {
-          $(id).addClass('back');
+          $(cardID).addClass('back');
         } else {
-          $(id).addClass('back');
+          $(cardID).addClass('back');
         }
       }
-
-      // $('#card-1').toggleClass('front').toggleClass('back');
-      // $('#card-2').toggleClass('back').toggleClass('front');
-      // $('#pagination li a:contains("1")').toggleClass('active');
-      // $('#pagination li a:contains("2")').toggleClass('active');
     };
 });
