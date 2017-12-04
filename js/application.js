@@ -71,11 +71,12 @@ $(document).ready(function() {
 
   // Cards
 
-    $('#drag-left svg').on('click touchstart', switchCard);
+    $('#drag-left svg').on('click', switchCard);
 
-    $('#drag-right svg').on('click touchstart', switchCard);
+    $('#drag-right svg').on('click', switchCard);
 
     function switchCard() {
+      console.log('swithc');
       $('#card-1').toggleClass('front').toggleClass('back');
       $('#card-2').toggleClass('back').toggleClass('front');
       $('#pagination li a:contains("1")').toggleClass('active');

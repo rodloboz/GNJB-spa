@@ -93,7 +93,7 @@ section {
 .container {
   max-width: 700px;
   margin: auto;
-  padding: 0px 50px;
+  padding: 0px 45px;
 }
 
 #nav-social-icons {
@@ -161,17 +161,17 @@ section {
 }
 
 .video-icons {
-  background-size: 80px;
+  background-size: 30px;
   background-position: 0 0;
   background-repeat: no-repeat;
-  width:80px;
-  height:80px;
-  opacity: 0.5;
-  display: none;
+  width:30px;
+  height:30px;
+  opacity: 0.8;
+  display: block;
 
   position: absolute;
-  bottom: 40px;
-  right: 80px;
+  bottom: 10px;
+  right: 10px;
 }
 
 .video-icons.show {
@@ -439,11 +439,13 @@ video {
 }
 
 #cards {
+  margin-top: 30px;
   position: relative;
+  padding: 0 20px;
 }
 
 .card {
-  width: 200px;
+  width: 260px;
   display: block;
   margin: auto;
 }
@@ -455,7 +457,7 @@ video {
 .back {
   position: absolute;
   top: 0;
-  left: calc(50% - 100px);
+  left: calc(50% - 130px);
   z-index: -1;
   transform: rotate(-4deg);
   -webkit-transform: rotate(-4deg);
@@ -463,13 +465,13 @@ video {
 
 #drag-left {
   position: absolute;
-  left: -40px;
+  left: -20px;
   top: calc(50% - 20px);
 }
 
 #drag-right {
   position: absolute;
-  right: -40px;
+  right: -20px;
   top: calc(50% - 20px);
 }
 
@@ -536,6 +538,10 @@ video {
   p {
     font-size: 14px;
     line-height: 18px;
+  }
+
+  .container {
+    padding: 0px 50px;
   }
 
   .burger {
@@ -643,6 +649,16 @@ video {
     background-size: 25px;
     width:25px;
     height:25px;
+  }
+
+  .video-icons {
+    background-size: 80px;
+    width:80px;
+    height:80px;
+    opacity: 0.5;
+    display: none;
+    bottom: 40px;
+    right: 80px;
   }
 }
 
