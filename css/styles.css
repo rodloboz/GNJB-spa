@@ -134,16 +134,63 @@ section {
 }
 
 .twitter-icon {
-  background-image:url(../assets/icons/twitter_i.png);
+  background-image: url(../assets/icons/twitter_i.png);
 }
 
 .facebook-icon {
-  background-image:url(../assets/icons/face_i.png);
+  background-image: url(../assets/icons/face_i.png);
 }
 
 .whatsapp-icon {
-  background-image:url(../assets/icons/whatsapp_i.png);
+  background-image: url(../assets/icons/whatsapp_i.png);
 }
+
+.skip-icon {
+  background-image: url(../assets/icons/skip_icon.svg);
+  background-size: 60px;
+  background-position: 0 0;
+  background-repeat: no-repeat;
+  width:60px;
+  height:60px;
+  opacity: 0.5;
+  display: block;
+  position: absolute;
+  bottom: 100px;
+  right: calc( 100vw / 2);
+  z-index: 9999;
+}
+
+.video-icons {
+  background-size: 60px;
+  background-position: 0 0;
+  background-repeat: no-repeat;
+  width:60px;
+  height:60px;
+  opacity: 0.5;
+  display: none;
+
+  position: absolute;
+  bottom: 20px;
+  right: 40px;
+}
+
+.video-icons.show {
+  display: block;
+}
+
+.video-icons.muted {
+  background-image: url(../assets/icons/sound_icon.svg);
+}
+
+.video-icons.unmuted {
+  background-image: url(../assets/icons/mute_icon.svg);
+}
+
+.video-icons:hover {
+  opacity: 0.8;
+}
+
+
 
 #pagination {
   display: -webkit-box;
@@ -379,6 +426,10 @@ section {
 
 .logos {
   height: 50px;
+}
+
+.video-wrapper {
+  position: relative;
 }
 
 
