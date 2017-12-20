@@ -8,48 +8,16 @@ Card.prototype.buildHTML = function(position) {
 };
 
 var cards = [
-  new Card(0, "assets/images/card1.png"),
-  new Card(1, "assets/images/card2.png"),
-  new Card(2, "assets/images/card3.png"),
-  new Card(3, "assets/images/card4.png")
-]
-
-var Quote = function(id, url) {
-  this.id = id
-  this.url = url;
-};
-
-var quotes = [
-  new Quote(0, "assets/quotes/QUOTE01.png"),
-  new Quote(1, "assets/quotes/QUOTE02.png"),
-  new Quote(2, "assets/quotes/QUOTE03.png"),
-  new Quote(3, "assets/quotes/QUOTE04.png"),
-  new Quote(4, "assets/quotes/QUOTE05.png"),
-  new Quote(5, "assets/quotes/QUOTE06.png"),
-  new Quote(6, "assets/quotes/QUOTE07.png"),
-  new Quote(7, "assets/quotes/QUOTE08.png"),
-  new Quote(8, "assets/quotes/QUOTE09.png"),
-  new Quote(9, "assets/quotes/QUOTE10.png")
-]
-
-var Stat = function(id, url) {
-  this.id = id
-  this.url = url;
-};
-
-var stats = [
-  new Stat(0, "assets/stats/DADOS01.png"),
-  new Stat(1, "assets/stats/DADOS02.png"),
-  new Stat(2, "assets/stats/DADOS03.png"),
-  new Stat(3, "assets/stats/DADOS04.png"),
-  new Stat(4, "assets/stats/DADOS05.png"),
-  new Stat(5, "assets/stats/DADOS06.png"),
-  new Stat(6, "assets/stats/DADOS07.png"),
-  new Stat(7, "assets/stats/DADOS08.png"),
-  new Stat(8, "assets/stats/DADOS09.png"),
-  new Stat(9, "assets/stats/DADOS10.png"),
-  new Stat(10, "assets/stats/DADOS11.png"),
-  new Stat(11, "assets/stats/DADOS12.png")
+  new Card(0, "assets/images/CARD_1.png"),
+  new Card(1, "assets/images/CARD_2.png"),
+  new Card(2, "assets/images/CARD_3.png"),
+  new Card(3, "assets/images/CARD_4.png"),
+  new Card(4, "assets/images/CARD_5.png"),
+  new Card(5, "assets/images/CARD_6.png"),
+  new Card(6, "assets/images/CARD_7.png"),
+  new Card(7, "assets/images/CARD_8.png"),
+  new Card(8, "assets/images/CARD_9.png"),
+  new Card(9, "assets/images/CARD_10.png")
 ]
 
 $(document).ready(function() {
@@ -91,11 +59,25 @@ $(document).ready(function() {
     videoDOM.attr('autoplay');
   }
 
+
   var vid = $('video')[0];
   $(window).scroll(function(){
     var scroll = $(this).scrollTop();
-    scroll > 300 ? vid.pause() : vid.play()
+    if (scroll > 300) {
+      vid.pause();
+      $('.topmenu').addClass('active');
+      $('h1').fadeIn().removeClass('hidden');
+    } else {
+      vid.play();
+      $('.topmenu').removeClass('active');
+      $('h1').fadeOut().addClass('hidden');
+    }
   });
+
+  videoDOM.click(function() {
+    vid.paused === true ? vid.play() : vid.pause()
+
+  })
 
   videoDOM.mouseenter(function() {
     $('.video-icons').addClass("show");
@@ -142,70 +124,52 @@ $(document).ready(function() {
 
     function switchCards() {
       // Update Card Classes
-      $('.card').removeClass('back');
-      $('.card').removeClass('front');
-      $('.card').removeClass('second');
-      $('.card').removeClass('third');
-      $('#card-circles li a').removeClass('active');
-      for (i in cards) {
-        var cardID = `#card-${cards[i].id}`;
-        if (i == 0) {
-          var markerID = `#circle-${cards[i].id}`
-          $(cardID).addClass('front');
-          $(markerID).addClass('active');
-        } else if (i == 1) {
-          $(cardID).addClass('second');
-        } else if (i == 2) {
-          $(cardID).addClass('third');
-        } else if (i == cards.length - 1) {
-          $(cardID).addClass('back');
-        } else {
-          $(cardID).addClass('back');
-        }
+      for (var i = 0; i < 4; i++) {
+        var cardID = `#card-${i}`;
+        $(cardID).attr("src", cards[i].url);
       }
+      $('#card-circles li a').removeClass('active');
+      var markerID = `#circle-${cards[0].id}`
+      $(markerID).addClass('active');
     };
 
-    // Quotes
+    // Scrollmagic
 
-    var nextQuote = quotes[0];
+    var x = $(".one h2").offset();
+var one = $(".one").width();
+var para = $(".one h2").width();
+var right = one - (x.left + para);
+var twoOffset = $(".two h2").offset();
+var twoLeftOffset = twoOffset.left - one;
+var firstLine = twoLeftOffset + right;
+var leftPos = para + x.left;
 
-    $('.quote').click(function() {
-      var prevID, nextID;
-      prevID = `#q-${nextQuote.id}`;
-      if (nextQuote !== quotes[quotes.length - 1]) {
-        nextQuote = quotes[nextQuote.id + 1];
-      } else {
-        nextQuote = quotes[0];
-      }
-      nextID = `#q-${nextQuote.id}`;
-      $(prevID).toggleClass('active');
-      $(nextID).toggleClass('active');
-      $('img.quote').fadeOut(700, function(){
-          $(this).attr('src', nextQuote.url).bind('onreadystatechange load', function(){
-             if (this.complete) $(this).fadeIn(700);
-          });
-       });
-    });
+$(".horizontal-line").css({"top": x.top, "left": leftPos});
+// init controller
+var controller = new ScrollMagic.Controller();
 
-    // Stats
+var controller = new ScrollMagic.Controller();
 
-    var nextStat = stats[0];
+    // define movement of panels
+    var wipeAnimation = new TimelineMax()
+      .to("#slideContainer", 1,   {x: "-75%"})
 
-    $('.stat').click(function() {
-      var prevID, nextID;
-      prevID = `#s-${nextStat.id}`;
-      if (nextStat !== stats[stats.length - 1]) {
-        nextStat = stats[nextStat.id + 1];
-      } else {
-        nextStat = stats[0];
-      }
-      nextID = `#s-${nextStat.id}`;
-      $(prevID).toggleClass('active');
-      $(nextID).toggleClass('active');
-      $('img.stat').fadeOut(700, function(){
-          $(this).attr('src', nextStat.url).bind('onreadystatechange load', function(){
-             if (this.complete) $(this).fadeIn(700);
-          });
-       });
-    });
+    // create scene to pin and link animation
+    new ScrollMagic.Scene({
+        triggerElement: "#pinContainer",
+        triggerHook: "onLeave",
+        duration: "500%"
+      })
+      .setPin("#pinContainer")
+      .setTween(wipeAnimation)
+      .addTo(controller);
+
+
+   var horizontal = new ScrollMagic.Scene({
+        offset: 50,
+        duration: 300,
+       // reverse: false
+      }).setTween(".horizontal-line", {width: firstLine}) // trigger a TweenMax.to tween
+        // .addIndicators()
+        .addTo(controller);
 });
