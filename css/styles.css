@@ -1,3 +1,44 @@
+pie {
+    width: 5em;
+    height: 5em;
+    display: block;
+    border-radius: 50%;
+    background-color: transparent;
+    border: solid 1px white;
+    float: left;
+    margin: 1em;
+}
+
+.ten {
+    background-image:
+        linear-gradient(126deg, transparent 50%, white 50%),
+        linear-gradient(90deg, white 50%, transparent 50%);
+}
+
+.twentyfive {
+    background-image:
+        linear-gradient(180deg, transparent 50%, white 50%),
+        linear-gradient(90deg, white 50%, transparent 50%);
+}
+
+.fifty {
+    background-image:
+        linear-gradient(90deg, white 50%, transparent 50%);
+}
+
+/* Slices greater than 50% require first gradient
+   to be transparent -> green */
+
+.seventyfive {
+    background-image:
+        linear-gradient(180deg, transparent 50%, white 50%),
+        linear-gradient(90deg, white 50%, transparent 50%);
+}
+
+.onehundred {
+    background-image: none;
+}
+
 body {
   color: #AFC2C3;
   margin: 0;
@@ -23,10 +64,10 @@ h2 {
 
 p {
   font-family: helv;
-  font-size: 12px;
-  line-height: 2;
+  font-size: 14px;
+  line-height: 15px;
   font-weight: 300;
-  letter-spacing: 3px;
+  letter-spacing: 1.5px;
 }
 
 a {
@@ -45,12 +86,12 @@ section {
 .title-section {
   font-family: bazar;
   letter-spacing: 2px;
-  font-size:70px;
-  line-height: 75px;
+  font-size:40px;
+  line-height: 40px;
   color: #D8D8D8;
   overflow-wrap: break-word;
   word-wrap: break-word;
-  margin-bottom: 50px;
+  margin-bottom: 25px;
 }
 
 #section1 {
@@ -60,7 +101,7 @@ section {
 
 #section1::after {
   content: "";
-  background: url(../assets/textures/DECO-low.jpg) center center no-repeat;
+  background: url(../assets/textures/DECO-low.jpg) center center repeat;
   background-blend-mode: multiply;
   opacity: 0.4;
   top: 0;
@@ -78,7 +119,7 @@ section {
 
 #section2::after {
   content: "";
-  background: url(../assets/textures/WWW-low.jpg) center center no-repeat;
+  background: url(../assets/textures/WWW-low.jpg) center center repeat;
   background-blend-mode: multiply;
   opacity: 0.4;
   top: 0;
@@ -90,13 +131,12 @@ section {
 }
 
 #section3 {
-  background: rgba(139, 49, 37, 0.8);
   position: relative;
 }
 
 #section3::after {
   content: "";
-  background: url(../assets/textures/MADEIRA-low.jpg) center center no-repeat;
+  background: url(../assets/textures/MADEIRA-low.jpg) center center repeat;
   background-blend-mode: multiply;
   opacity: 0.4;
   top: 0;
@@ -108,15 +148,57 @@ section {
 }
 
 #section4 {
-  background: white;
+  background: rgba(210, 148, 128, 0.8);
+  position: relative;
+}
+
+#section4::after {
+  content: "";
+  background: url(../assets/textures/WWW-low.jpg) center center repeat;
+  background-blend-mode: multiply;
+  opacity: 0.4;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  position: absolute;
+  z-index: -1;
 }
 
 #section5 {
-  background: #8A2E25;
+  background: linear-gradient(0deg, rgba(139, 49, 37, 0.8), rgba(211, 149, 129, 0.8));
+  position: relative;
+}
+
+#section5::after {
+  content: "";
+  background: url(../assets/textures/DECO-low.jpg) center center no-repeat;
+  background-blend-mode: multiply;
+  opacity: 0.4;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  position: absolute;
+  z-index: -1;
 }
 
 #section6 {
-  background: #8A2E25;
+  background: linear-gradient(0deg, rgba(60, 14, 8, 0.8), rgba(139, 49, 37, 0.8));
+  position: relative;
+}
+
+#section6::after {
+  content: "";
+  background: url(../assets/textures/WWW-low.jpg) center center no-repeat;
+  background-blend-mode: multiply;
+  opacity: 0.4;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  position: absolute;
+  z-index: -1;
 }
 
 .painel {
@@ -126,7 +208,7 @@ section {
 
 .painel::after {
   content: "";
-  background: url(../assets/textures/MADEIRA-low.jpg) center center no-repeat;
+  background: url(../assets/textures/MADEIRA-low.jpg) center center repeat;
   background-blend-mode: multiply;
   opacity: 0.4;
   top: 0;
@@ -200,7 +282,7 @@ section {
 }
 
 .social-icons span {
-  font-size: 15px;
+  font-size: 30px;
   font-weight: lighter;
   color: #b94231;
   width:30px;
@@ -242,7 +324,7 @@ section {
 }*/
 
 .tool-icon {
-  font-size: 60px;
+  font-size: 40px;
   color: white;
   position: relative;
 }
@@ -252,13 +334,8 @@ section {
 }
 
 .video-icons {
-  background-size: 30px;
-  background-position: 0 0;
-  background-repeat: no-repeat;
-  width:30px;
-  height:30px;
-  opacity: 0.8;
-  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=80)";
+  color: white;
+  opacity: 0.5;
   display: block;
   position: absolute;
   top: 30px;
@@ -537,7 +614,8 @@ section {
 }
 
 .heading {
-  font-size: 25px;
+  font-size: 20px;
+  line-height: 25px;
   font-family: bazar;
   text-transform: uppercase;
 }
@@ -569,6 +647,13 @@ section {
 
 .logos {
   height: 50px;
+  opacity: 0.5;
+  transition: opacity 0.4s ease-in-out;
+}
+
+.logos:hover {
+  opacity: 1;
+  transition: opacity 0.4s ease-in-out;
 }
 
 .video-wrapper {
@@ -684,8 +769,6 @@ video {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-
-  margin-top: 30px;
 }
 
 .quote {
@@ -713,49 +796,7 @@ video {
   cursor: pointer;
 }
 
-/* Scrollmagic */
 
-#pinContainer {
-  width: 100%;
-  height: 100vh;
-  overflow: hidden;
-  -webkit-perspective: 1000;
-  perspective: 1000;
-}
-
-#slideContainer {
-  width: 400%;
-  height: 100vh;
-}
-
-.painel {
-  height: 100vh;
-  width: 25%;
-  float: left;
-  text-align: center;
-}
-
-.one {
-  color: white;
-}
-
-.one button {
-  display: block;
-  margin: 0 auto;
-}
-
-.two {
-  color: white;
-}
-
-.three {
-  color: white;
-  position: relative;
-}
-
-.four {
-  color: #FFF;
-}
 
 /* Glitch */
 @keyframes glitch {
@@ -782,7 +823,8 @@ video {
 
 .glitch {
     font-family: cinnebar;
-    font-size: 43px;
+    font-size: 20px;
+    line-height: 25px;
     font-style: italic;
     text-transform: uppercase;
     color: white;
@@ -828,17 +870,415 @@ video {
     animation: glitch-2 .2s linear infinite;
 }
 
-.big-card {
-  background: #D19381;
-  padding: 30px;
-  border: solid 10px black;
+/* Stats */
+
+/* Scrollmagic */
+
+#horizontal-s {
+  overflow: hidden;
+  position: relative;
+  height: 100%;
+}
+
+.horizontal-content {
+  height: 100%;
+}
+
+.painel {
+  height: 100%;
+  text-align: left;
+  float: left;
+  height: 100vh;
+  position: relative;
+}
+
+#s01 {
+  width: 1600px;
+  padding: 50px 0px 0px 100px;
+}
+
+#s02 {
+  width: 900px;
+}
+
+#s03 {
+  width: 1600px;
+}
+
+#s04 {
+  width: 1050px;
+}
+
+#s05 {
+  width: 800px;
+}
+
+#s1data01 {
+  position: absolute;
+  top: 72%;
+}
+
+#s1data01 p {
+  display: inline-block;
+}
+
+#s1data01 > p:nth-child(1) {
+  font-family: bazar;
+  color: white;
+  text-align: left;
+  line-height: 105px;
+  margin-right: 5px;
+}
+
+#s1data01 > p:nth-child(2) {
+  width: 250px;
+  font-family: bazar;
+  color: white;
+  text-align: left;
+  font-size: 20px;
+  line-height: 25px;
+  position: absolute;
+  bottom: 0;
+}
+
+#s1data01 .porcent {
+  font-size:110px;
+}
+
+#s1data01 .porcenticon {
+  font-size: 55px;
+}
+
+#s1data02 {
+  position: absolute;
+  top: 10%;
+  margin-left: 600px;
+}
+
+#s1data02 p {
+  width: 300px;
+}
+
+#s1data02 > p:nth-child(2) {
+  font-family: bazar;
+  color: white;
+  text-align: left;
+  line-height: 105px;
+  margin-bottom: 0px;
+}
+
+#s1data02 > p:nth-child(3) {
+  font-family: bazar;
+  color: white;
+  text-align: left;
+  font-size: 20px;
+  line-height: 25px;
+}
+
+#s1data02 .porcent {
+  font-size:100px;
+}
+
+#s1data02 .porcenticon {
+  font-size: 50px;
+}
+
+#s1data03 {
+  position: absolute;
+  top: 52%;
+  margin-left: 1000px;
+}
+
+#s1data03 > p:nth-child(1) {
+  font-family: bazar;
+  color: white;
+  text-align: left;
+  line-height: 145px;
+  margin-right: 5px;
+  float: left;
+  margin-bottom: 0;
+  vertical-align: text-bottom;
+}
+
+#s1data03 > p:nth-child(2) {
+  width: 250px;
+  font-family: bazar;
+  color: white;
+  text-align: left;
+  font-size: 20px;
+  line-height: 25px;
+  float: right;
+}
+
+#s1data03 > p:nth-child(3) {
+  width: 450px;
+  font-family: bazar;
+  color: white;
+  text-align: left;
+  font-size: 20px;
+  line-height: 25px;
+  clear: both;
+  position: absolute;
+  left: 25px;
+  bottom: -28px;
+}
+
+#s1data03 .porcent {
+  font-size:140px;
+}
+
+#s1data03 .porcenticon {
+  font-size: 70px;
+}
+
+#s2data01 {
+  position: absolute;
+  top: 20%;
+}
+
+#s2data01 div > p:nth-child(2) {
+  width: 250px;
+  font-family: bazar;
+  color: white;
+  text-align: left;
+  font-size: 20px;
+  line-height: 25px;
+  width: 200px;
+}
+
+#s2data01 .porcent {
+  font-family: bazar;
+  color: white;
+  text-align: left;
+  line-height: 240px;
+  margin-right: 5px;
+  margin-bottom: 0;
+  vertical-align: text-bottom;
+  font-size:240px;
+}
+
+#s2data01 .porcenticon {
+  font-family: bazar;
+  color: white;
+  vertical-align: text-bottom;
+  font-size: 50px;
+  line-height: 50px;
+}
+
+#s2data02 {
+  position: absolute;
+  top: 50%;
+  margin-left: 500px;
+}
+
+#s2data02 p {
+  font-family: bazar;
+  color: white;
+  text-align: left;
+  width: 400px;
+}
+
+#s2data02 > p:nth-child(1) {
+  font-size: 20px;
+  line-height: 25px;
+}
+
+#s2data02 .porcent {
+  font-family: bazar;
+  color: white;
+  text-align: left;
+  line-height: 140px;
+  margin-right: 5px;
+  margin-bottom: 0;
+  vertical-align: text-bottom;
+  font-size:140px;
+}
+
+#s2data02 .porcenticon {
+  font-family: bazar;
+  color: white;
+  vertical-align: text-bottom;
+  font-size: 70px;
+  line-height: 70px;
+}
+
+#s3data01 {
+  position: absolute;
+  top: 10%;
+}
+
+#s3data02 {
+  position: absolute;
+  top: 50%;
+  margin-left: 600px;
+}
+
+#s3data02 p {
+  font-family: bazar;
+  color: white;
+  text-align: left;
+  width: 400px;
+  font-size: 20px;
+  line-height: 25px;
+}
+
+#s3data02 .porcent {
+  font-family: bazar;
+  color: white;
+  text-align: left;
+  line-height: 140px;
+  margin-right: 5px;
+  margin-bottom: 0;
+  vertical-align: text-bottom;
+  font-size:140px;
+}
+
+#s3data02 .porcenticon {
+  font-family: bazar;
+  color: white;
+  vertical-align: text-bottom;
+  font-size: 70px;
+  line-height: 70px;
+}
+
+#s3data03 {
+  position: absolute;
+  top: 10%;
+  margin-left: 1000px;
+}
+
+#s3text {
+  position: absolute;
+  top: 24%;
+  margin-left: 220px;
+}
+
+#s3text p {
+  font-family: bazar;
+  color: white;
+  text-align: left;
+  width: 350px;
+  font-size: 18px;
+  line-height: 20px;
+}
+
+#s3text .porcent {
+  font-family: bazar;
+  color: white;
+  text-align: left;
+  line-height: 120px;
+  margin-right: 5px;
+  margin-bottom: 0;
+  vertical-align: text-bottom;
+  font-size:120px;
+}
+
+#s3text .porcenticon {
+  font-family: bazar;
+  color: white;
+  vertical-align: text-bottom;
+  font-size: 60px;
+  line-height: 60px;
+}
+
+#s4data01 {
+  position: absolute;
+  top: 25%;
+}
+
+#s4data02 {
+  position: absolute;
+  top: 15%;
+  margin-left: 500px;
+  width: 450px;
+}
+
+#s4data02 p {
+  font-family: bazar;
+  color: white;
+  text-align: left;
+  width: 350px;
+  font-size: 20px;
+  line-height: 25px;
+}
+
+#s4data02 .porcent {
+  font-family: bazar;
+  color: white;
+  text-align: left;
+  line-height: 200px;
+  margin-right: 5px;
+  margin-bottom: 0;
+  vertical-align: text-bottom;
+  font-size:200px;
+}
+
+#s4data02 .porcenticon {
+  font-family: bazar;
+  color: white;
+  vertical-align: text-bottom;
+  font-size: 70px;
+  line-height: 70px;
+}
+
+#s5data01 {
+  position: absolute;
+  top: 25%;
+}
+
+#s5data02 {
+  position: absolute;
+  top: 15%;
+  margin-left: 400px;
+}
+
+#s5data02 p {
+  font-family: bazar;
+  color: white;
+  text-align: left;
+  width: 400px;
+  font-size: 20px;
+  line-height: 25px;
+}
+
+#s5data02 .porcent {
+  font-family: bazar;
+  color: white;
+  text-align: left;
+  line-height: 140px;
+  margin-right: 5px;
+  margin-bottom: 0;
+  vertical-align: text-bottom;
+  font-size:140px;
+}
+
+#s5data02 .porcenticon {
+  font-family: bazar;
+  color: white;
+  vertical-align: text-bottom;
+  font-size: 70px;
+  line-height: 70px;
+}
+
+.stat-highlight {
+  color: black;
+  background: #ABBEBD;
+}
+
+.rec-card {
+  margin: 10px;
+  background: #4F4B4C;
+  padding: 20px;
+  color: #F3F8F8;
+  font-size: 20px;
+  line-height: 25px;
 }
 
 .intro-text {
   font-size: 20px;
-  line-height: 32px;
+  line-height: 28px;
   font-family: helv-med;
-  color: white;
+  color: #F9F7F8;
 }
 
 /* Contact Form */
@@ -893,6 +1333,36 @@ label {
   text-transform: uppercase;
 }
 
+.text-box-wrapper {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.text-box {
+  background-color: #B94231;
+  margin-top: 10px;
+  width: 80%;
+  height: 100px;
+  padding: 10px;
+  text-transform: uppercase;
+  font-family: bazar;
+  font-size: 15px;
+  line-height: 26px;
+  color: #F5F5F5;
+}
+
+.line-box {
+  background-color: #B94231;
+  margin-left: 5px;
+  margin-right: 5px;
+  width: 20%;
+  height: 10px;
+}
+
 
 
 /* Media */
@@ -933,8 +1403,8 @@ label {
   }
 
   p {
-    font-size: 25px;
-    line-height: 32px;
+    font-size: 20px;
+    line-height: 30px;
   }
 
   .container {
@@ -992,6 +1462,12 @@ label {
 
   .number {
     font-size: 14px;
+  }
+
+  .title-section {
+    font-size:70px;
+    line-height: 75px;
+    margin-bottom: 50px;
   }
 
   .heading {
@@ -1102,6 +1578,29 @@ label {
     display: none;
     bottom: 40px;
     right: 80px;
+  }
+
+  .glitch {
+    font-size: 40px;
+    line-height: 45px;
+  }
+
+  .text-box-wrapper {
+    flex-direction: row;
+  }
+
+  .text-box {
+    margin: 0;
+    margin-left: 5px;
+    margin-right: 5px;
+    width: 20%;
+    height: 150px;
+    font-size: 20px;
+  }
+
+  .rec-card {
+    font-size: 25px;
+    line-height: 33px;
   }
 }
 

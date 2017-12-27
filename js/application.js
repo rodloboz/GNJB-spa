@@ -87,14 +87,18 @@ $(document).ready(function() {
     $('.video-icons').removeClass("show");
   });
 
-  $('.video-icons').click(function() {
+  $('#btn-mute').click('[data-fa-processed]', function() {
     if (!muted) {
       $('video').prop("muted", true);
-      $(this).removeClass('unmuted').addClass('muted');
+      console.log($this);
+      $(this)
+        .find('[data-fa-processed]')
+        .toggleClass('fa-volume-off')
+        .toggleClass('fa-volume-up');
       muted = true;
     } else if (muted) {
       $('video').prop("muted", false);
-      $(this).removeClass('muted').addClass('unmuted');
+      $(this).removeClass('fa-volume-up').addClass('fa-volume-off');
       muted = false;
     }
   });
@@ -134,42 +138,23 @@ $(document).ready(function() {
     };
 
     // Scrollmagic
-
-    var x = $(".one h2").offset();
-var one = $(".one").width();
-var para = $(".one h2").width();
-var right = one - (x.left + para);
-var twoOffset = $(".two h2").offset();
-var twoLeftOffset = twoOffset.left - one;
-var firstLine = twoLeftOffset + right;
-var leftPos = para + x.left;
-
-$(".horizontal-line").css({"top": x.top, "left": leftPos});
-// init controller
-var controller = new ScrollMagic.Controller();
-
-var controller = new ScrollMagic.Controller();
-
-    // define movement of panels
+    var ctrl = new ScrollMagic.Controller();
+    var pininner=5950;
+    var leftpin=5950;
+    $("#horizontal-s").width("100%");
+    $("#horizontal-content").width(pininner);
+    var leftpinpx='-'+leftpin+'px';
     var wipeAnimation = new TimelineMax()
-      .to("#slideContainer", 1,   {x: "-75%"})
-
-    // create scene to pin and link animation
+      .fromTo("#horizontal-s",
+              1,
+              {left:  "0px"},
+              {left:leftpinpx, ease: Linear.easeNone });
     new ScrollMagic.Scene({
-        triggerElement: "#pinContainer",
+        triggerElement: "span.trigger",
         triggerHook: "onLeave",
-        duration: "500%"
+        duration:"500%"
       })
-      .setPin("#pinContainer")
+      .setPin("#horizontal-content")
       .setTween(wipeAnimation)
-      .addTo(controller);
-
-
-   var horizontal = new ScrollMagic.Scene({
-        offset: 50,
-        duration: 300,
-       // reverse: false
-      }).setTween(".horizontal-line", {width: firstLine}) // trigger a TweenMax.to tween
-        // .addIndicators()
-        .addTo(controller);
+      .addTo(ctrl);
 });
