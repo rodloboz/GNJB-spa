@@ -3,7 +3,18 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Mulheres No Jornalismo Brasileiro </title>
+  <title>Mulheres No Jornalismo Brasileiro</title>
+  <!-- Open Graph -->
+  <meta property="og:url"           content="https://gnjb-spa.surge.sh/index.html" />
+  <meta property="og:type"          content="website" />
+  <meta property="og:title"         content="Mulheres No Jornalismo Brasileiro" />
+  <meta property="og:description"   content="A Associação Brasileira de Jornalismo Investigativo (Abraji) e a Gênero e Número realizaram uma pesquisa inédita no Brasil, com o apoio do Google News Lab, para investigar os desafios enfrentados pelas mulheres no exercício da profissão jornalística." />
+  <meta property="og:image"         content="https://gnjb-spa.surge.sh/assets/images/website-poster.png" />
+  <meta name="twitter:card" content="summary" />
+  <!-- <meta name="twitter:site" content="@flickr" /> -->
+  <meta name="twitter:title" content="Mulheres No Jornalismo Brasileiro" />
+  <meta name="twitter:description" content="A Associação Brasileira de Jornalismo Investigativo (Abraji) e a Gênero e Número realizaram uma pesquisa inédita no Brasil, com o apoio do Google News Lab, para investigar os desafios enfrentados pelas mulheres no exercício da profissão jornalística." />
+  <meta name="twitter:image" content="https://gnjb-spa.surge.sh/assets/images/website-poster.png" />
   <!-- Include Bootstrap -->
   <link rel="stylesheet" href="plugins/bootstrap/css/bootstrap.min.css">
   <link rel="stylesheet" href="css/styles.css">
@@ -29,42 +40,51 @@
       <div class="nav-content">
         <ul class="nav-menu">
           <li>
-            <a href="#section1" class="roz nav-text">SOBRE</a>
+            <a href="#sobre" class="roz nav-text">SOBRE</a>
           </li>
           <li>
-            <a href="#section2" class="roz nav-text">METODOLOGIA</a>
+            <a href="#metodologia" class="roz nav-text">METODOLOGIA</a>
           </li>
           <li>
-            <a href="#section3" class="roz nav-text">MATERIAIS</a>
+            <a href="#materiais" class="roz nav-text">MATERIAIS</a>
           </li>
           <li>
-            <a href="#section4" class="roz nav-text">RECOMENDAÇÕES</a>
+            <a href="#rec" class="roz nav-text">RECOMENDAÇÕES</a>
           </li>
           <li>
-            <a href="#section5" class="roz nav-text">EQUIPE</a>
+            <a href="#equipe" class="roz nav-text">EQUIPE</a>
           </li>
           <li>
-            <a href="#section6" class="roz nav-text">COLABORE</a>
+            <a href="#colabore" class="roz nav-text">COLABORE</a>
           </li>
         </ul>
         <ul id="nav-social-icons" class="social-icons">
           <li>
+            <a id="facebook-link" href="https://www.facebook.com/sharer/sharer.php?u=gnjb-spa.surge.sh" target="_blank">
             <span class="fa-layers fa-5x">
               <i class="fa fa-circle facebook-icon" style="color: white;"></i>
               <i class="fab fa-facebook-f fa-inverse" data-fa-transform="shrink-8 down-.25 right-.25" style="color: #b94231;"></i>
             </span>
+
+            </a>
           </li>
           <li>
-            <span class="fa-layers fa-5x"">
-              <i class="fa fa-circle twitter-icon" style="color: white;"></i>
-              <i class="fab fa-twitter fa-inverse" data-fa-transform="shrink-8 down-.25 right-.25" style="color: #b94231;"></i>
-            </span>
+            <a id="twitter-link" href="http://twitter.com/share?text=text goes here&url=https://gnjb-spa.surge.sh&hashtags=hashtag1,hashtag2,hashtag3
+            " target="_blank">
+              <span class="fa-layers fa-5x"">
+                <i class="fa fa-circle twitter-icon" style="color: white;"></i>
+                <i class="fab fa-twitter fa-inverse" data-fa-transform="shrink-8 down-.25 right-.25" style="color: #b94231;"></i>
+              </span>
+            </a>
           </li>
           <li>
-            <span class="fa-layers fa-5x"">
-              <i class="fa fa-circle whatsapp-icon" style="color: white;"></i>
-              <i class="fab fa-whatsapp fa-inverse" data-fa-transform="shrink-8 down-.25 right-.25" style="color: #b94231;"></i>
-            </span>
+            <a id="whatsapp-link" href="https://web.whatsapp.com/send?text=https://gnjb-spa.surge.sh/" data-action="share/whatsapp/share" target="_blank">
+              <span class="fa-layers fa-5x"">
+                <i class="fa fa-circle whatsapp-icon" style="color: white;"></i>
+                <i class="fab fa-whatsapp fa-inverse" data-fa-transform="shrink-8 down-.25 right-.25" style="color: #b94231;"></i>
+              </span>
+            </a>
+
           </li>
         </ul>
         <div class="nav-footer">
@@ -86,15 +106,14 @@
   </div>
 
   <!-- Video -->
+  <div class="video-icons fa-2x">
+    <i id="btn-pause" class="fa fa-pause"></i>
+    <i id="btn-mute"  class="fa fa-volume-off"></i>
+  </div>
   <div class="video-wrapper" style="margin: 0;">
     <video preload autobuffer autoplay poster="assets/images/vposter.png">
         <source src="assets/video/animacao_GN_final_small.mov" type="video/mp4">
     </video>
-    <!-- <div class="video-icons unmuted"></div> -->
-    <div class="video-icons fa-3x">
-      <i class="fa fa-pause"></i>
-      <i id="btn-mute" class="fa fa-volume-off"></i>
-    </div>
     <!-- <div class="skip-icon">
       <i class="fas fa-angle-double-down"></i>
     </div> -->
@@ -102,6 +121,7 @@
 
   <!-- Section 1 -->
   <section id="section1">
+    <section id="sobre"></section>
     <div class="container">
       <div class="row">
         <div class="col-xs-12 col-sm-6">
@@ -190,9 +210,10 @@
 
   <!-- Section 2 -->
   <section id="section2">
+    <section id="metodologia"></section>
     <div class="container text-left">
       <div class="row">
-        <h2 class="title-section text-right">
+        <h2 class="title-section text-left">
           METODOLOGIA
         </h2>
       </div>
@@ -247,6 +268,7 @@
   <!-- Section 3 -->
   <span class="trigger"></span>
   <section id="section3">
+    <section id="materiais"></section>
     <!-- Scrollmagic Panels -->
     <div id="horizontal-s">
       <div id="horizontal-content">
@@ -255,10 +277,12 @@
             <h2 class="title-section text-left">
               MATERIAIS
             </h2>
-            <span class="tool-icon">
-              <i class="fas fa-arrow-circle-down"></i>
-            </span>
-            <p>Baixe o PDF do estudo</p>
+            <a href="12901_GN_relatorioV3.pdf" target="_blank">
+              <span class="tool-icon">
+                <i class="fas fa-arrow-circle-down"></i>
+              </span>
+              <p>Baixe o PDF do estudo</p>
+            </a>
           </div>
           <div id="s1data01">
             <p>
@@ -370,7 +394,7 @@
         </div>
         <div id="s05" class="painel">
           <div id="s5data01">
-            <img src="assets/stats/11.svg" alt="" style="height: 500px">
+            <img src="assets/stats/11.svg" alt="" style="height: 550px">
           </div>
           <div id="s5data02">
             <p>
@@ -386,13 +410,12 @@
 
   <!-- Section 4 -->
   <section id="section4">
+    <section id="rec"></section>
     <div class="container text-left">
       <div class="row">
-        <div class="col-sm-9 col-sm-offset-3">
+        <div class="col-xs-12 col-sm-6">
           <h2 class="title-section text-left">RECOMENDAÇÕES</h2>
-        </div>
-        <div class="col-sm-6 col-sm-offset-3">
-          <p class="intro-text">Os resultados da pesquisa mostram que há um longo caminho a percorrer para que a igualdade de gênero se estabeleça no jornalismo profissional. Algumas recomendações simples podem acelerar a transição para um período de justiça com todas as repórteres, editoras e trabalhadoras da imprensa brasileira:</p>
+          <p class="text-light helv">Os resultados da pesquisa mostram que há um longo caminho a percorrer para que a igualdade de gênero se estabeleça no jornalismo profissional. Algumas recomendações simples podem acelerar a transição para um período de justiça com todas as repórteres, editoras e trabalhadoras da imprensa brasileira:</p>
         </div>
       </div>
       <div class="row">
@@ -424,23 +447,24 @@
 
   <!-- Section 5 -->
   <section id="section5">
+    <section id="equipe"></section>
     <div class="container">
       <div class="row">
-        <h2 class="title-section text-right">EQUIPE</h2>
+        <h2 class="title-section text-left">EQUIPE</h2>
       </div>
       <div class="row">
         <div class="col-xs-12 col-sm-6">
-          <p class="heading text-light">Coordenação de pesquisa:</p>
-          <p class="helv text-light">Natália e Verônica Toste</p>
-          <p class="heading text-light">Consultoria executiva:</p>
-          <p class="helv text-light">Maiá Menezes, Alana Lobo e Thiago Herdy</p>
-          <p class="heading text-light">Pesquisadora principal:</p>
+          <p class="heading">Coordenação de pesquisa:</p>
+          <p class="helv text-light">Natália Mazotte e Verônica Toste</p>
+          <p class="heading">Consultoria executiva:</p>
+          <p class="helv text-light">Maiá Menezes, Alana Rizzo e Thiago Herdy</p>
+          <p class="heading">Pesquisadora principal:</p>
           <p class="helv text-light">Verônica Toste</p>
-          <p class="heading text-light">Pesquisadoras assistentes:</p>
+          <p class="heading">Pesquisadoras assistentes:</p>
           <p class="helv text-light">Andressa Cabral e Fernanda Távora</p>
-          <p class="heading text-light">Gerência do projeto:</p>
+          <p class="heading">Gerência do projeto:</p>
           <p class="helv text-light">Guilherme Alpendre</p>
-          <p class="heading text-light">Webdesign, infografias e animações</p>
+          <p class="heading">Webdesign, infografias e animações</p>
           <p class="helv text-light">Mariana Santos, Inês Barracha, Rui Freitas, João Erbetta & Victor Abarca</p>
         </div>
         <div class="col-xs-12 col-sm-6">
@@ -455,6 +479,7 @@
 
   <!-- Section 6 -->
   <section id="section6">
+    <section id="colabore"></section>
     <div class="container">
       <div class="row">
         <h2 class="title-section text-left">COLABORE</h2>

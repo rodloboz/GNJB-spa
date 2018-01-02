@@ -20,6 +20,37 @@ var cards = [
   new Card(9, "assets/images/CARD_10.png")
 ]
 
+var pauseVid = function() {
+  var vid = $('video')[0];
+  if (paused) {
+    vid.play();
+    paused = false;
+    $('#btn-pause').attr('data-icon', 'pause');
+  }
+  else if (!paused) {
+    vid.pause();
+    paused = true;
+    $('#btn-pause').attr('data-icon', 'play');
+  }
+}
+
+var muteVid = function() {
+  var vid = $('video');
+  if (muted) {
+    vid.prop('muted', false);
+    muted = false;
+    $('#btn-mute').attr('data-icon', 'volume-off');
+  }
+  else {
+    vid.prop('muted', true);
+    muted = true;
+    $('#btn-mute').attr('data-icon', 'volume-up');
+  }
+}
+
+var muted = false;
+var paused = false;
+
 $(document).ready(function() {
   var isMobile = false; //initiate as false
   // device detection
@@ -29,9 +60,13 @@ $(document).ready(function() {
   // Nav
 
   var toggleBurger = function() {
+    vid.pause();
+    paused = true;
+    $('#btn-pause').attr('data-icon', 'play');
     $('.burger').toggleClass('open');
     $('#nav').toggleClass('open');
     $('.navigation').toggleClass('open');
+    $('.video-icons').fadeOut();
   }
 
   $('.burger').click(function() {
@@ -48,16 +83,39 @@ $(document).ready(function() {
     }, 2000);
   })
 
+  // $('#nav-social-icons a').click(function (e) {
+  //   console.log("yes")
+  //   e.stopPropagation();
+  //   return false;
+  // });
+
   // Video
 
   var videoDOM = $('.video-wrapper');
   var screenWidth = $(window).width();
-  var muted = false;
+  var vidIcons = $('.video-icons');
+
+
   if (isMobile){
     videoDOM.removeAttr('autoplay');
+    $("#whatsapp-link").attr('href', 'whatsapp://send?text=https://gnjb-spa.surge.sh/" data-action="share/whatsapp/share')
   } else {
     videoDOM.attr('autoplay');
   }
+
+  $('#btn-pause').attr('onClick', 'pauseVid()');
+  $('#btn-mute').attr('onClick', 'muteVid()');
+
+
+    videoDOM.mousemove(function() {
+      if (vidIcons.css('display') == 'none' ) {
+        vidIcons
+          .fadeIn()
+        setTimeout(function() {
+          vidIcons.fadeOut();
+        }, 2000)
+      }
+    });
 
 
   var vid = $('video')[0];
@@ -67,25 +125,17 @@ $(document).ready(function() {
       vid.pause();
       $('.topmenu').addClass('active');
       $('h1').fadeIn().removeClass('hidden');
-    } else {
+    } else if (scroll <= 300 && !paused) {
       vid.play();
+      $('.topmenu').removeClass('active');
+      $('h1').fadeOut().addClass('hidden');
+    } else {
       $('.topmenu').removeClass('active');
       $('h1').fadeOut().addClass('hidden');
     }
   });
 
-  videoDOM.click(function() {
-    vid.paused === true ? vid.play() : vid.pause()
-
-  })
-
-  videoDOM.mouseenter(function() {
-    $('.video-icons').addClass("show");
-  });
-
-  videoDOM.mouseleave(function() {
-    $('.video-icons').removeClass("show");
-  });
+  videoDOM.click(pauseVid)
 
   $('#btn-mute').click('[data-fa-processed]', function() {
     if (!muted) {
