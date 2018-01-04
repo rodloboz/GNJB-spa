@@ -1,23 +1,64 @@
-var Card = function(id, url) {
+var Card = function(id, img, url) {
   this.id = id
+  this.img = img;
   this.url = url;
 };
 
 Card.prototype.buildHTML = function(position) {
-  return  `<img src="${this.url}" alt="" id="card-${this.id}" class="card">`
+  return  `<img src="${this.img}" alt="" id="card-${this.id}" class="card">`
 };
 
 var cards = [
-  new Card(0, "assets/images/CARD_1.png"),
-  new Card(1, "assets/images/CARD_2.png"),
-  new Card(2, "assets/images/CARD_3.png"),
-  new Card(3, "assets/images/CARD_4.png"),
-  new Card(4, "assets/images/CARD_5.png"),
-  new Card(5, "assets/images/CARD_6.png"),
-  new Card(6, "assets/images/CARD_7.png"),
-  new Card(7, "assets/images/CARD_8.png"),
-  new Card(8, "assets/images/CARD_9.png"),
-  new Card(9, "assets/images/CARD_10.png")
+  new Card(
+    0,
+    "assets/images/CARD_1.png",
+    "https://gnjb-spa.surge.sh/cards/card_1.html"
+  ),
+  new Card(
+    1,
+    "assets/images/CARD_2.png",
+    "https://gnjb-spa.surge.sh/cards/card_2.html"
+  ),
+  new Card(
+    2,
+    "assets/images/CARD_3.png",
+    "https://gnjb-spa.surge.sh/cards/card_3.html"
+  ),
+  new Card(
+    3,
+    "assets/images/CARD_4.png",
+    "https://gnjb-spa.surge.sh/cards/card_4.html"
+  ),
+  new Card(
+    4,
+    "assets/images/CARD_5.png",
+    "https://gnjb-spa.surge.sh/cards/card_5.html"
+  ),
+  new Card(
+    5,
+    "assets/images/CARD_6.png",
+    "https://gnjb-spa.surge.sh/cards/card_6.html"
+  ),
+  new Card(
+    6,
+    "assets/images/CARD_7.png",
+    "https://gnjb-spa.surge.sh/cards/card_7.html"
+  ),
+  new Card(
+    7,
+    "assets/images/CARD_8.png",
+    "https://gnjb-spa.surge.sh/cards/card_8.html"
+  ),
+  new Card(
+    8,
+    "assets/images/CARD_9.png",
+    "https://gnjb-spa.surge.sh/cards/card_9.html"
+  ),
+  new Card(
+    9,
+    "assets/images/CARD_10.png",
+    "https://gnjb-spa.surge.sh/cards/card_10.html"
+  )
 ]
 
 var pauseVid = function() {
@@ -180,17 +221,23 @@ $(document).ready(function() {
       // Update Card Classes
       for (var i = 0; i < 4; i++) {
         var cardID = `#card-${i}`;
-        $(cardID).attr("src", cards[i].url);
+        $(cardID).attr("src", cards[i].img);
       }
-      $('#card-circles li a').removeClass('active');
-      var markerID = `#circle-${cards[0].id}`
-      $(markerID).addClass('active');
+      $('#facebook-share').attr(
+        'href',
+        "https://www.facebook.com/sharer/sharer.php?u=" + cards[0].url);
     };
 
     // Scrollmagic
     var ctrl = new ScrollMagic.Controller();
-    var pininner=5950;
-    var leftpin=5950;
+    var pininner, leftpin;
+    if (isMobile) {
+      pininner=5700;
+      leftpin=5700;
+    } else {
+      pininner=5950;
+      leftpin=5950;
+    }
     $("#horizontal-s").width("100%");
     $("#horizontal-content").width(pininner);
     var leftpinpx='-'+leftpin+'px';
