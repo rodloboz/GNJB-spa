@@ -25,7 +25,7 @@ h2 {
 p {
   font-family: helv;
   font-size: 14px;
-  line-height: 15px;
+  line-height: 18px;
   font-weight: 300;
   letter-spacing: 1.5px;
 }
@@ -52,6 +52,21 @@ section {
   overflow-wrap: break-word;
   word-wrap: break-word;
   margin-bottom: 25px;
+}
+
+#pdf-wrapper {
+  width: 300px !important;
+}
+
+#pdf-cover {
+  width: 300px;
+  border: 1px solid #FFF;
+}
+
+#pdf-cover:hover {
+  opacity: 0.8;
+  position: relative;
+  top: -5px;
 }
 
 #section1 {
@@ -130,10 +145,6 @@ section {
 .helv {
   font-family: helv;
 }
-/*
-.helv-med {
-  font-family: helv-med;
-}*/
 
 .cinnabar {
   font-family: cinnabar;
@@ -146,6 +157,67 @@ section {
 .text-highlight {
   /*background-color: rgba(93, 93, 93, 0.5);*/
   background-color: #353434;
+}
+
+#preload {
+  width: 100%;
+  height: 100%;
+  background: #D16B59;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10000;
+}
+
+.logo {
+  margin: 150px auto 50px auto;
+  color: white;
+  text-transform: uppercase;
+  font-family: bazar;
+  font-size: 40px;
+  text-shadow: -1px 2px 2px #000;
+  text-align: center;
+}
+
+.loader-frame {
+  width: 70px;
+  height: 70px;
+  margin: auto;
+  position: relative;
+}
+
+.loader1, .loader2 {
+  position: absolute;
+  border: 5px solid transparent;
+  border-radius: 50%;
+}
+
+.loader1 {
+  width: 70px;
+  height: 70px;
+  border-top: 5px solid white;
+  border-bottom: 5px solid white;
+  animation: clockwisespin 2s linear 3;
+}
+
+.loader2 {
+  width: 60px;
+  height: 60px;
+  border-left: 5px solid #4F4B4C;
+  border-right: 5px solid #4F4B4C;
+  top: 5px;
+  left: 5px;
+  animation: anticlockwisespin 2s linear 3;
+}
+
+@keyframes clockwisespin {
+  from {transform: rotate(0deg);}
+  to {transform: rotate(-360deg);}
+}
+
+@keyframes anticlockwisespin {
+  from {transform: rotate(0deg);}
+  to {transform: rotate(360deg);}
 }
 
 #nav-social-icons {
@@ -186,18 +258,6 @@ section {
 .whatsapp-icon:hover {
   color: #34af23;
 }
-
-/*.skip-icon {
-  font-size: 60px;
-  color: white;
-  opacity: 0.5;
-  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
-  display: block;
-  position: absolute;
-  bottom: 50px;
-  right: calc( 100vw / 2);
-  z-index: 999;
-}*/
 
 .tool-icon {
   font-size: 40px;
@@ -767,7 +827,7 @@ video {
 }
 
 #s01 {
-  width: 1600px;
+  width: 2000px;
   padding: 50px 0px 0px 100px;
 }
 
@@ -790,6 +850,7 @@ video {
 #s1data01 {
   position: absolute;
   top: 72%;
+  margin-left: 400px;
 }
 
 #s1data01 p {
@@ -826,7 +887,7 @@ video {
 #s1data02 {
   position: absolute;
   top: 10%;
-  margin-left: 600px;
+  margin-left: 1000px;
 }
 
 #s1data02 p {
@@ -860,7 +921,7 @@ video {
 #s1data03 {
   position: absolute;
   top: 52%;
-  margin-left: 1000px;
+  margin-left: 1400px;
 }
 
 #s1data03 > p:nth-child(1) {
@@ -1178,6 +1239,10 @@ video {
 
 /* Contact Form */
 
+.help-block {
+  color: white;
+}
+
 #contact-area {
   padding-right: calc((100% - 800px) / 2);
   padding-left: calc((100% - 800px) / 2);
@@ -1211,6 +1276,7 @@ video {
   font-family: bazar;
   text-transform: uppercase;
   background: none;
+  outline: none;
 
 }
 
@@ -1262,27 +1328,6 @@ label {
 
 /* Media */
 
-/*@media screen and (max-height: 480px) {
-  .navigation {
-    height: 60px;
-    margin-top: 30px;
-  }
-
-  .nav-text {
-    font-size: 18px;
-  }
-
-  #nav-social-icons {
-    margin-top: 0;
-    margin-bottom: 5px;
-    margin-right: 20px;
-  }
-
-  .nav-menu {
-    margin-bottom: 0;
-  }
-}
-*/
 @media screen and (min-height: 600px){
   .navigation {
     height: 80%;
@@ -1290,7 +1335,63 @@ label {
   }
 }
 
-@media screen and (min-width: 1280px) {
+/* iPads (portrait and landscape) ----------- */
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) {
+  h2 {
+    font-size: 115px;
+    line-height: 120px;
+  }
+
+  p {
+    font-size: 18px;
+    line-height: 22px;
+  }
+
+  .glitch {
+    font-size: 30px;
+    line-height: 35px;
+  }
+
+  .rec-card {
+    font-size: 20px;
+    line-height: 30px;
+  }
+}
+
+/* iPads (landscape) ----------- */
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : landscape) {
+  .text-box-wrapper {
+    flex-direction: row;
+  }
+
+  .text-box {
+    margin: 0;
+    margin-left: 5px;
+    margin-right: 5px;
+    width: 20%;
+    height: 150px;
+    font-size: 20px;
+  }
+}
+
+/* iPad Pro (portrait and landscape) ----------- */
+@media only screen and (min-device-width : 1024px) and (max-device-width : 1366px) {
+  .text-box-wrapper {
+    flex-direction: row;
+  }
+
+  .text-box {
+    margin: 0;
+    margin-left: 5px;
+    margin-right: 5px;
+    width: 20%;
+    height: 150px;
+    font-size: 20px;
+  }
+}
+
+/* Desktops and laptops ----------- */
+@media screen and (min-width: 1224px) {
 
   h2 {
     font-size: 115px;
@@ -1482,12 +1583,12 @@ label {
   }
 
   .rec-card {
-    font-size: 25px;
-    line-height: 33px;
+    font-size: 18px;
+    line-height: 25px;
   }
 
   #s01 {
-    width: 1600px;
+    width: 2000px;
   }
 
   #s02 {

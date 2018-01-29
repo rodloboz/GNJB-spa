@@ -5,16 +5,16 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Mulheres No Jornalismo Brasileiro</title>
   <!-- Open Graph -->
-  <meta property="og:url"           content="https://gnjb-spa.surge.sh/index.html" />
+  <meta property="og:url"           content="http://www.mulheresnojornalismo.org.br/index.html" />
   <meta property="og:type"          content="website" />
   <meta property="og:title"         content="Mulheres No Jornalismo Brasileiro" />
   <meta property="og:description"   content="A Associação Brasileira de Jornalismo Investigativo (Abraji) e a Gênero e Número realizaram uma pesquisa inédita no Brasil, com o apoio do Google News Lab, para investigar os desafios enfrentados pelas mulheres no exercício da profissão jornalística." />
-  <meta property="og:image"         content="https://gnjb-spa.surge.sh/assets/images/website-poster.png" />
-  <meta name="twitter:card" content="summary" />
-  <!-- <meta name="twitter:site" content="@flickr" /> -->
+  <meta property="og:image"         content="http://www.mulheresnojornalismo.org.br/assets/images/website-poster.png" />
   <meta name="twitter:title" content="Mulheres No Jornalismo Brasileiro" />
+  <!-- <meta name="twitter:site" content="@abraji" /> -->
+  <!-- <meta name="twitter:site" content="@generonumero" /> -->
   <meta name="twitter:description" content="A Associação Brasileira de Jornalismo Investigativo (Abraji) e a Gênero e Número realizaram uma pesquisa inédita no Brasil, com o apoio do Google News Lab, para investigar os desafios enfrentados pelas mulheres no exercício da profissão jornalística." />
-  <meta name="twitter:image" content="https://gnjb-spa.surge.sh/assets/images/website-poster.png" />
+  <meta name="twitter:image" content="http://www.mulheresnojornalismo.org.br/assets/images/website-poster.png" />
   <!-- Include Bootstrap -->
   <link rel="stylesheet" href="plugins/bootstrap/css/bootstrap.min.css">
   <link rel="stylesheet" href="css/styles.css">
@@ -28,6 +28,16 @@
   <script src="plugins/scrollmagic/plugins/animation.gsap.min.js"></script>
 </head>
 <body>
+  <!-- Loader -->
+  <div id="preload">
+    <div class="logo text-center">
+      Mulheres no Jornalismo Brasileiro
+    </div>
+    <div class="loader-frame">
+      <div class="loader1" id="loader1"></div>
+      <div class="loader2" id="loader2"></div>
+    </div>
+  </div>
 
   <!-- Menu -->
   <div class="topmenu">
@@ -60,7 +70,7 @@
         </ul>
         <ul id="nav-social-icons" class="social-icons">
           <li>
-            <a id="facebook-link" href="https://www.facebook.com/sharer/sharer.php?u=gnjb-spa.surge.sh" target="_blank">
+            <a id="facebook-link" href="https://www.facebook.com/sharer/sharer.php?u=http://www.mulheresnojornalismo.org.br/" target="_blank">
             <span class="fa-layers fa-2x">
               <i class="fa fa-circle facebook-icon" style="color: white;"></i>
               <i class="fab fa-facebook-f fa-inverse" data-fa-transform="shrink-8 down-.25 right-.25" style="color: #b94231;"></i>
@@ -68,7 +78,7 @@
             </a>
           </li>
           <li>
-            <a id="twitter-link" href="http://twitter.com/share?text=text goes here&url=https://gnjb-spa.surge.sh&hashtags=hashtag1,hashtag2,hashtag3
+            <a id="twitter-link" href="http://twitter.com/share?text=pesquisa sobre mulheres no jornalismo brasileiro&url=http://www.mulheresnojornalismo.org.br/&hashtags=genero,mulheresnojornalismo
             " target="_blank">
               <span class="fa-layers fa-2x"">
                 <i class="fa fa-circle twitter-icon" style="color: white;"></i>
@@ -77,7 +87,7 @@
             </a>
           </li>
           <li>
-            <a id="whatsapp-link" href="https://web.whatsapp.com/send?text=https://gnjb-spa.surge.sh/" data-action="share/whatsapp/share" target="_blank">
+            <a id="whatsapp-link" href="https://web.whatsapp.com/send?text=http://www.mulheresnojornalismo.org.br/" data-action="share/whatsapp/share" target="_blank">
               <span class="fa-layers fa-2x"">
                 <i class="fa fa-circle whatsapp-icon" style="color: white;"></i>
                 <i class="fab fa-whatsapp fa-inverse" data-fa-transform="shrink-8 down-.25 right-.25" style="color: #b94231;"></i>
@@ -98,7 +108,6 @@
               <img src="assets/logos/GoogleNewsLab.svg" alt="" class="logos">
             </a>
           </div>
-          <!-- <p>Realização: logo GN, logo Abraji // <br> Apoio: Google News Lab</p> -->
         </div>
       </div>
     </div>
@@ -110,8 +119,21 @@
     <i id="btn-mute"  class="fa fa-volume-off"></i>
   </div>
   <div class="video-wrapper" style="margin: 0;">
-    <video preload autobuffer autoplay poster="assets/images/vposter.png">
-        <source src="assets/video/animacao_GN_final_small.mov" type="video/mp4">
+    <video  preload autobuffer poster="assets/images/vposter.png">
+        <source
+          src="assets/video/Final_animacaoGeneroJornalismoBrasileiro_final_1.webm"
+          type="video/webm">
+        <source
+          src="assets/video/Final_animacaoGeneroJornalismoBrasileiro_final_1.mp4"
+          type="video/mp4">
+        <source
+        src="assets/video/Final_animacaoGeneroJornalismoBrasileiro_final_1_1.mp4"
+        type="video/mp4"
+        media="all and (max-width: 640)">
+        <source
+          src="assets/video/Final_animacaoGeneroJornalismoBrasileiro_final_1_1_1.mp4"
+          type="video/mp4"
+          media="all and (max-width: 800)">
     </video>
     <!-- <div class="skip-icon">
       <i class="fas fa-angle-double-down"></i>
@@ -170,7 +192,7 @@
             </div>
             <ul id="cards-social-icons" class="social-icons">
               <li>
-                <a id="facebook-share" href="https://www.facebook.com/sharer/sharer.php?u=https://gnjb-spa.surge.sh/cards/card_1.html" target="_blank">
+                <a id="facebook-share" href="https://www.facebook.com/sharer/sharer.php?u=http://www.mulheresnojornalismo.org.br/cards/card_1.html" target="_blank">
                   <span class="fa-layers fa-4x">
                     <i class="fa fa-circle facebook-icon" style="color: white;"></i>
                     <i class="fab fa-facebook-f fa-inverse" data-fa-transform="shrink-8 down-.25 right-.25" style="color: #b94231;"></i>
@@ -178,16 +200,20 @@
                 </a>
               </li>
               <li>
-                <span class="fa-layers fa-4x"">
-                  <i class="fa fa-circle twitter-icon" style="color: white;"></i>
-                  <i class="fab fa-twitter fa-inverse" data-fa-transform="shrink-8 down-.25 right-.25" style="color: #b94231;"></i>
-                </span>
+                <a id="twitter-share" href='http://twitter.com/share?text="Por estar há três anos no jornal e fazendo uma pauta bem pesada, achei que era um bom momento para pedir um aumento. Apenas ouvi: - Você veio me pedir um aumento com esse barrigão?"&url=http://www.mulheresnojornalismo.org.br/cards/card_1.html&hashtags=genero,mulheresnojornalismo' target="_blank">
+                  <span class="fa-layers fa-4x"">
+                    <i class="fa fa-circle twitter-icon" style="color: white;"></i>
+                    <i class="fab fa-twitter fa-inverse" data-fa-transform="shrink-8 down-.25 right-.25" style="color: #b94231;"></i>
+                  </span>
+                </a>
               </li>
               <li>
-                <span class="fa-layers fa-4x"">
-                  <i class="fa fa-circle whatsapp-icon" style="color: white;"></i>
-                  <i class="fab fa-whatsapp fa-inverse" data-fa-transform="shrink-8 down-.25 right-.25" style="color: #b94231;"></i>
-                </span>
+                <a id="whatsapp-share" href="https://web.whatsapp.com/send?text=http://www.mulheresnojornalismo.org.br/cards/card_1.html" data-action="share/whatsapp/share" target="_blank">
+                  <span class="fa-layers fa-4x"">
+                    <i class="fa fa-circle whatsapp-icon" style="color: white;"></i>
+                    <i class="fab fa-whatsapp fa-inverse" data-fa-transform="shrink-8 down-.25 right-.25" style="color: #b94231;"></i>
+                  </span>
+                </a>
               </li>
             </ul>
           </div>
@@ -212,12 +238,10 @@
     <section id="metodologia"></section>
     <div class="container text-left">
       <div class="row">
-        <h2 class="title-section text-left">
-          METODOLOGIA
-        </h2>
-      </div>
-      <div class="row">
         <div class="col-xs-12 col-sm-6">
+          <h2 class="title-section text-left">
+            METODOLOGIA
+          </h2>
           <p class="text-light helv">A pesquisa “Gênero no Jornalismo Brasileiro” aplicou métodos qualitativos e quantitativos, observando como se dão as relações de gênero dentro do ambiente das redações.<br/><br/>Na fase qualitativa, foram realizados grupos focais em Brasília, Porto Alegre, Rio de Janeiro e São Paulo com 42 jornalistas. Ao longo das conversas, as participantes falaram sobre cinco eixos temáticos dentro da questão de gênero e trabalho:</p>
         </div>
         <div class="col-xs-12 col-sm-6"></div>
@@ -240,7 +264,7 @@
             Avaliação sobre gênero e a cobertura midiática. A partir do resultado
           </div>
         </div>
-        <div class="text-box-wrapper hidden-xs">
+        <div class="text-box-wrapper hidden-xs hidden-sm">
           <div class="line-box"></div>
           <div class="line-box"></div>
           <div class="line-box"></div>
@@ -277,10 +301,13 @@
               MATERIAIS
             </h2>
             <a href="12901_GN_relatorioV3.pdf" target="_blank">
-              <span class="tool-icon">
+              <!-- <span class="tool-icon">
                 <i class="fas fa-arrow-circle-down"></i>
-              </span>
-              <p>Baixe o PDF do estudo</p>
+              </span> -->
+              <div id="pdf-wrapper" class="text-center">
+                <img src="assets/images/website-poster.png" id="pdf-cover">
+                <p>Baixe o PDF do estudo</p>
+              </div>
             </a>
           </div>
           <div id="s1data01">
@@ -344,7 +371,7 @@
         </div>
         <div id="s03" class="painel">
           <div id="s3data01">
-            <img src="assets/stats/6.svg" alt="" style="height: 450px">
+            <svg width="450px" height="450px" viewBox="0 0 986.03 1004.58"><title>6</title><path d="M327.08,722.06l-174,126.39c-69.8-96.07-48.5-230.54,47.57-300.34C239.12,520.18,279.58,507,327.08,507Z" transform="translate(-49.3 -8.99)" style="fill:none;stroke:#fff;stroke-miterlimit:10;stroke-width:3px"/><path d="M327,722.06V507c118.75,0,215,96.27,215,215s-96.27,215-215,215c-71.25,0-132.07-31-174-88.63Z" transform="translate(-49.3 -8.99)" style="fill:#fff"/><rect x="621.85" y="626.75" width="364.19" height="33.56" style="fill:#abbebd"/><rect x="621.85" y="537.14" width="364.19" height="33.56" style="fill:#abbebd"/><rect x="621.85" y="581.94" width="364.19" height="33.56" style="fill:#abbebd"/><rect x="621.85" y="671.55" width="364.19" height="33.56" style="fill:#abbebd"/><rect x="621.85" y="716.35" width="364.19" height="33.56" style="fill:#abbebd"/><rect x="621.85" y="761.15" width="364.19" height="33.56" style="fill:#abbebd"/><rect x="621.85" y="850.75" width="364.19" height="33.56" style="fill:#abbebd"/><rect x="621.85" y="805.95" width="364.19" height="33.56" style="fill:#abbebd"/><text transform="translate(629.42 428.66)" style="font-size:38px;fill:#fff;font-family:HelveticaNeue, Helvetica Neue">das jo<tspan x="102.75" y="0" style="letter-spacing:0.017989309210526317em">r</tspan><tspan x="116.09" y="0">nalistas que </tspan><tspan x="0" y="45" style="letter-spacing:-0.017989309210526317em">r</tspan><tspan x="11.97" y="45">esponderam a </tspan><tspan x="0" y="90">pesquisa afirmaram </tspan><tspan style="fill:#231f20;font-family:HelveticaNeue-Bold, Helvetica Neue;font-weight:700"><tspan x="0" y="135">ter tido sua </tspan><tspan x="0" y="180">competência </tspan><tspan x="0" y="225">questionada ou </tspan><tspan x="0" y="270">visto uma colega </tspan><tspan x="0" y="315">ter a competência </tspan><tspan x="0" y="360">questionada por </tspan><tspan x="0" y="405">colegas ou </tspan><tspan x="0" y="450">superio</tspan><tspan x="135.77" y="450" style="letter-spacing:-0.017989309210526317em">r</tspan><tspan x="149.87" y="450">es</tspan></tspan></text><text transform="translate(0 311.68)" style="font-size:350px;fill:#fff;font-family:Bazar, Bazar">65,7</text><text transform="translate(601.99 353.65)" style="font-size:115px;fill:#fff;font-family:Bazar, Bazar">%</text><polyline points="277.65 506.81 277.65 462.44 19.62 462.44 19.62 405.48" style="fill:none;stroke:#fff;stroke-miterlimit:10;stroke-width:4px"/></svg>
           </div>
           <div id="s3data02">
             <p>
@@ -372,7 +399,7 @@
         </div>
         <div id="s04" class="painel">
           <div id="s4data01">
-            <img src="assets/stats/9.svg" alt="">
+            <svg width="350px" height="450px" viewBox="0 0 942.28 1240.04"><title>9</title><rect y="1084.22" width="921.8" height="37.05" style="fill:#abbebd"/><rect y="1128.01" width="921.8" height="37.05" style="fill:#abbebd"/><rect y="1040.44" width="921.8" height="37.05" style="fill:#abbebd"/><text transform="translate(213.47 1023.79)" style="font-size:38px;fill:#fff;font-family:HelveticaNeue, Helvetica Neue">que <tspan x="74.63" y="0" style="letter-spacing:-0.017989309210526317em">r</tspan><tspan x="86.6" y="0">esponderam a pesquisa </tspan><tspan style="fill:#231f20;font-family:HelveticaNeue-Bold, Helvetica Neue;font-weight:700"><tspan x="-203.94" y="45">já </tspan><tspan x="-161" y="45" style="letter-spacing:-0.017989309210526317em">r</tspan><tspan x="-146.91" y="45">eceberam, no exe</tspan><tspan x="176.05" y="45" style="letter-spacing:-0.017989309210526317em">r</tspan><tspan x="190.15" y="45">cício do trabalho, p</tspan><tspan x="539.06" y="45" style="letter-spacing:-0.017989309210526317em">r</tspan><tspan x="553.16" y="45">opostas </tspan><tspan x="-170.9" y="90">ou demandas por favo</tspan><tspan x="234.44" y="90" style="letter-spacing:-0.017989309210526317em">r</tspan><tspan x="248.54" y="90">es sexuais em t</tspan><tspan x="529.24" y="90" style="letter-spacing:-0.017989309210526317em">r</tspan><tspan x="543.33" y="90">oca de </tspan><tspan x="-115.1" y="135">algum benefício p</tspan><tspan x="207.71" y="135" style="letter-spacing:-0.017989309210526317em">r</tspan><tspan x="221.8" y="135">ofissional ou material</tspan></tspan></text><circle cx="869.79" cy="241.29" r="71.49" style="fill:#fff"/><circle cx="869.79" cy="72.49" r="71.49" style="fill:none;stroke:#fff;stroke-miterlimit:10;stroke-width:2px"/><circle cx="680.02" cy="72.49" r="71.49" style="fill:none;stroke:#fff;stroke-miterlimit:10;stroke-width:2px"/><circle cx="680.02" cy="241.29" r="71.49" style="fill:none;stroke:#fff;stroke-miterlimit:10;stroke-width:2px"/><circle cx="490.24" cy="72.49" r="71.49" style="fill:none;stroke:#fff;stroke-miterlimit:10;stroke-width:2px"/><circle cx="490.24" cy="241.29" r="71.49" style="fill:none;stroke:#fff;stroke-miterlimit:10;stroke-width:2px"/><circle cx="300.47" cy="72.49" r="71.49" style="fill:none;stroke:#fff;stroke-miterlimit:10;stroke-width:2px"/><circle cx="300.47" cy="241.29" r="71.49" style="fill:none;stroke:#fff;stroke-miterlimit:10;stroke-width:2px"/><circle cx="110.7" cy="72.49" r="71.49" style="fill:none;stroke:#fff;stroke-miterlimit:10;stroke-width:2px"/><circle cx="110.7" cy="241.29" r="71.49" style="fill:none;stroke:#fff;stroke-miterlimit:10;stroke-width:2px"/><text transform="translate(39.21 356.26)" style="font-size:31px;fill:#fff;font-family:HelveticaNeue, Helvetica Neue">10 jo<tspan x="67.77" y="0" style="letter-spacing:0.017956149193548387em">r</tspan><tspan x="78.65" y="0">nalistas</tspan></text><text transform="translate(266.32 831.44)" style="font-size:350px;fill:#fff;font-family:Bazar, Bazar">1</text><polyline points="351.39 516.05 351.39 394.38 869.79 394.38 869.79 269.39" style="fill:none;stroke:#fff;stroke-miterlimit:10;stroke-width:4px"/><rect x="389.9" y="815.55" width="507.61" height="71.09" style="fill:#abbebd"/><text transform="translate(423.27 861.87)" style="font-size:38px;fill:#231f20;font-family:HelveticaNeue-Bold, Helvetica Neue;font-weight:700">em cada 10 jo<tspan x="252.62" y="0" style="letter-spacing:0.01801500822368421em">r</tspan><tspan x="268.09" y="0">nalistas</tspan></text></svg>
           </div>
           <div id="s4data02">
             <div style="float:left; margin-right: 10px;">
@@ -393,7 +420,7 @@
         </div>
         <div id="s05" class="painel">
           <div id="s5data01">
-            <img src="assets/stats/11.svg" alt="">
+            <svg width="350px" height="480px" viewBox="0 0 847.08 1348.96"><title>11</title><rect x="178.75" y="1139.75" width="668.33" height="37.05" style="fill:#abbebd"/><rect x="13.95" y="1187.74" width="833.13" height="37.05" style="fill:#abbebd"/><text transform="translate(13.95 1123.99)" style="font-size:38px;fill:#fff;font-family:HelveticaNeue, Helvetica Neue">das jo<tspan x="102.75" y="0" style="letter-spacing:0.017989309210526317em">r</tspan><tspan x="116.09" y="0">nalistas que </tspan><tspan x="330.06" y="0" style="letter-spacing:-0.017989309210526317em">r</tspan><tspan x="342.03" y="0">esponderam a pesquisa </tspan><tspan x="0" y="45">alegaram</tspan><tspan x="156.94" y="45" xml:space="preserve" style="fill:#231f20;font-family:HelveticaNeue-Bold, Helvetica Neue;font-weight:700"> já ter sofrido algum tipo de </tspan><tspan style="fill:#231f20;font-family:HelveticaNeue-Bold, Helvetica Neue;font-weight:700"><tspan x="0" y="90">ag</tspan><tspan x="45.03" y="90" style="letter-spacing:-0.017989309210526317em">r</tspan><tspan x="59.13" y="90">essão física no exe</tspan><tspan x="404.54" y="90" style="letter-spacing:-0.017989309210526317em">r</tspan><tspan x="418.64" y="90">cício da p</tspan><tspan x="594.46" y="90" style="letter-spacing:-0.017989309210526317em">r</tspan><tspan x="608.56" y="90">ofissão</tspan></tspan></text><text transform="translate(0 979.36)" style="font-size:350px;fill:#fff;font-family:Bazar, Bazar">17,3</text><text transform="translate(609.59 1021.34)" style="font-size:115px;fill:#fff;font-family:Bazar, Bazar">%</text><path d="M401.35,325.95,153.53,463.32C77.67,326.45,127.12,154,264,78.13S573.31,51.71,649.17,188.58,675.59,497.9,538.72,573.77c-43.8,24.28-87.29,35.53-137.37,35.53Z" transform="translate(-36.06 -41.05)" style="fill:none;stroke:#fff;stroke-miterlimit:10;stroke-width:3px"/><path d="M401.35,325.95V609.29c-106.41,0-196.23-52.91-247.82-146Z" transform="translate(-36.06 -41.05)" style="fill:#fff"/><polyline points="43.32 679.28 43.32 612.98 241.39 612.98 241.39 527.66" style="fill:none;stroke:#fff;stroke-miterlimit:10;stroke-width:4px"/></svg>
           </div>
           <div id="s5data02">
             <p>
@@ -487,16 +514,27 @@
       <div class="row">
         <div class="col-xs-12">
           <div id="contact-area">
-            <form method="post" action="contactengine.php">
-              <label for="Name">Nome</label>
-              <input type="text" name="Name" id="Name" />
+            <form name="sentMessage" id="contactForm" novalidate>
 
-              <label for="Email">Email</label>
-              <input type="text" name="Email" id="Email" />
+              <div class="form-group">
+                <label for="Name">Nome</label>
+                <input type="text" name="Name" id="name" required data-validation-required-message="Por favor, indique o seu nome.">
+                <p class="help-block text-danger"></p>
+              </div>
 
-              <label for="Message">Mensagem</label>
-              <textarea name="Message" rows="20" cols="20" id="Message"></textarea>
+              <div class="form-group">
+                <label for="Email">Email</label>
+                <input type="email" name="Email" id="email" required data-validation-required-message="Por favor, indique o seu endereço de email.">
+                <p class="help-block text-danger"></p>
+              </div>
 
+              <div class="form-group">
+                <label for="Message">Mensagem</label>
+                <textarea name="Message" rows="20" cols="20" id="message" required data-validation-required-message="Por favor, escreva uma mensagem."></textarea>
+                <p class="help-block text-danger"></p>
+              </div>
+
+              <div id="success"></div>
               <input type="submit" name="submit" value="Enviar" class="submit-button" />
             </form>
           </div>
@@ -506,5 +544,7 @@
   </section>
 
   <script src="js/application.js"></script>
+  <script src="js/jqBootstrapValidation.js"></script>
+  <script src="js/contact.js"></script>
 </body>
 </html>
